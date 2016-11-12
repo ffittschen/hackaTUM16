@@ -55,12 +55,5 @@ class HomeTabViewController: UIViewController {
             .bindTo(funBucks.rx.text)
             .addDisposableTo(disposeBag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
