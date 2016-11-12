@@ -36,6 +36,8 @@
 		04D2CE511DD7AE2800F009A0 /* MachtSpassAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE501DD7AE2800F009A0 /* MachtSpassAction.swift */; };
 		04D2CE531DD7B15B00F009A0 /* AzureClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE521DD7B15B00F009A0 /* AzureClient.swift */; };
 		04D2CE561DD7B38700F009A0 /* MachtSpass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE551DD7B38700F009A0 /* MachtSpass.swift */; };
+		04D2CE5E1DD7CA4B00F009A0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE5D1DD7CA4B00F009A0 /* Product.swift */; };
+		04D2CE621DD7D35C00F009A0 /* AirPods.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04D2CE611DD7D35C00F009A0 /* AirPods.jpg */; };
 		C45E81391DD7394400A34143 /* QRScannerTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E81371DD7394400A34143 /* QRScannerTabViewController.swift */; };
 		C45E813A1DD7394400A34143 /* QRScannerTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45E81381DD7394400A34143 /* QRScannerTabViewController.xib */; };
 		C45E813C1DD744F900A34143 /* QRScannerTabViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */; };
@@ -113,6 +115,8 @@
 		04D2CE501DD7AE2800F009A0 /* MachtSpassAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachtSpassAction.swift; sourceTree = "<group>"; };
 		04D2CE521DD7B15B00F009A0 /* AzureClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzureClient.swift; sourceTree = "<group>"; };
 		04D2CE551DD7B38700F009A0 /* MachtSpass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachtSpass.swift; sourceTree = "<group>"; };
+		04D2CE5D1DD7CA4B00F009A0 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		04D2CE611DD7D35C00F009A0 /* AirPods.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AirPods.jpg; sourceTree = "<group>"; };
 		C45E81371DD7394400A34143 /* QRScannerTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerTabViewController.swift; sourceTree = "<group>"; };
 		C45E81381DD7394400A34143 /* QRScannerTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScannerTabViewController.xib; sourceTree = "<group>"; };
 		C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerTabViewCoordinator.swift; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				04D2CE551DD7B38700F009A0 /* MachtSpass.swift */,
+				04D2CE5D1DD7CA4B00F009A0 /* Product.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 		C4B4CF9D1DD75468006CA897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04D2CE611DD7D35C00F009A0 /* AirPods.jpg */,
 				C49D548D1DD7657000FCEE74 /* GaugeView.swift */,
 				04173ED61DD5DBB300F22E67 /* Assets.xcassets */,
 				04173ED81DD5DBB300F22E67 /* LaunchScreen.storyboard */,
@@ -437,6 +443,7 @@
 				C4E4F1411DD77BB000C487A4 /* TestProduct.json in Resources */,
 				04173ED71DD5DBB300F22E67 /* Assets.xcassets in Resources */,
 				C4B4CFA31DD756A6006CA897 /* ScanResultsViewController.xib in Resources */,
+				04D2CE621DD7D35C00F009A0 /* AirPods.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +516,7 @@
 				04D2CE561DD7B38700F009A0 /* MachtSpass.swift in Sources */,
 				04173EFF1DD5DC4800F22E67 /* AppCoordinator.swift in Sources */,
 				C4B4CF9F1DD7548B006CA897 /* UIDevice+isSimulator.swift in Sources */,
+				04D2CE5E1DD7CA4B00F009A0 /* Product.swift in Sources */,
 				04173F2F1DD5E6A400F22E67 /* HomeTabCoordinator.swift in Sources */,
 				C45E813C1DD744F900A34143 /* QRScannerTabViewCoordinator.swift in Sources */,
 				C45E813E1DD7450400A34143 /* QRScannerTabViewModel.swift in Sources */,

@@ -7,34 +7,41 @@
 //
 
 import Foundation
+import UIKit
 
 struct MachtSpass {
-    let productName: String
-    let machtSpass: Bool
+    let product: Product
+    let machtSpass: Bool?
     
     enum MachtSpassJSONKey: String {
         case productName
+        case productImageURL
         case machtSpass
     }
     
-    init(productName: String, machtSpass: Bool) {
-        self.productName = productName
+    init(product: Product, machtSpass: Bool? = nil) {
+        self.product = product
         self.machtSpass = machtSpass
     }
     
     init?(userInfo: [AnyHashable : Any]) {
         guard let productName = userInfo[MachtSpassJSONKey.productName.rawValue] as? String,
-              let machtSpass = userInfo[MachtSpassJSONKey.machtSpass.rawValue] as? Bool else {
+              let productImage = userInfo[MachtSpassJSONKey.productImageURL.rawValue] as? String,
+              let productImageURL = URL(string: productImage) else {
                 return nil
         }
         
-        self.init(productName: productName, machtSpass: machtSpass)
+        let machtSpass = userInfo[MachtSpassJSONKey.machtSpass.rawValue] as? Bool
+        let product = Product(name: productName, imageURL: productImageURL)
+        
+        self.init(product: product, machtSpass: machtSpass)
     }
     
     func toUserInfo() -> [String: Any] {
         var userInfo = [String : Any]()
         
-        userInfo[MachtSpassJSONKey.productName.rawValue] = productName
+        userInfo[MachtSpassJSONKey.productName.rawValue] = product.name
+        userInfo[MachtSpassJSONKey.productImageURL.rawValue] = product.imageURL.absoluteString
         userInfo[MachtSpassJSONKey.machtSpass.rawValue] = machtSpass
         
         return userInfo

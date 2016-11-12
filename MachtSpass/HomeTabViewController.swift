@@ -21,6 +21,7 @@ class HomeTabViewController: UIViewController {
     @IBOutlet weak var redeemButton: UIButton!
     @IBOutlet weak var giftButton: UIButton!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet weak var testNotificationButton: UIButton!
     
     fileprivate let disposeBag: DisposeBag
     fileprivate let viewModel: HomeTabViewModel
@@ -53,6 +54,16 @@ class HomeTabViewController: UIViewController {
                 return "\(intValue)"
             }
             .bindTo(funBucks.rx.text)
+            .addDisposableTo(disposeBag)
+        
+        testNotificationButton.rx.tap
+            .subscribe(onNext: { event in
+                if let imageURL = Bundle.main.url(forResource: "AirPods", withExtension: "jpg") {
+                    let product = Product(name: "Apple AirPods", imageURL: imageURL)
+                    NotificationHandler.scheduleNotification(for: MachtSpass(product: product, machtSpass: false), delay: 3)
+                }
+                
+            })
             .addDisposableTo(disposeBag)
     }
 }

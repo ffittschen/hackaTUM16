@@ -107,20 +107,19 @@ extension NotificationHandler: VersionSpecificNotificationHandler {
         }
     }
     
-    func scheduleNotification(for machtSpass: MachtSpass, delay: TimeInterval) {
-        let resourceName = machtSpass.machtSpass ? R.image.party.name : R.image.thumbDown.name
+    static func scheduleNotification(for machtSpass: MachtSpass, delay: TimeInterval) {
+        let resourceName = machtSpass.product.name
         
-        guard let imageURL = Bundle.main.url(forResource: resourceName, withExtension: "png"),
-              let attachment = try? UNNotificationAttachment(identifier: resourceName,
-                                                           url: imageURL,
-                                                           options: .none) else {
-                                                            return
+        guard let attachment = try? UNNotificationAttachment(identifier: resourceName,
+                                                             url: machtSpass.product.imageURL,
+                                                             options: .none) else {
+                                                                return
         }
         
         let content = UNMutableNotificationContent()
-        content.title = "Macht \(machtSpass.productName) Spaß?"
+        content.title = "Macht \(machtSpass.product.name) Spaß?"
         content.subtitle = "Was meinst du?"
-        content.body = "Du kannst auswählen, ob \(machtSpass.productName) Spaß macht oder keinen Spaß macht und dadurch anderen helfen."
+        content.body = "Du kannst auswählen, ob \(machtSpass.product.name) Spaß macht oder keinen Spaß macht und dadurch anderen helfen."
         content.attachments = [attachment]
         
         
