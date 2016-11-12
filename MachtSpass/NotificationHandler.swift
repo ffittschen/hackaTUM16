@@ -125,13 +125,13 @@ extension NotificationHandler: VersionSpecificNotificationHandler {
         
         
         //Note: For a remote notification to invoke your Notification Content extension, you'd need to add this same category identifier as the value for the category key in the payload dictionary.
-        content.categoryIdentifier = NotificationCategory.askForMakesFun
+        content.categoryIdentifier = NotificationCategory.askForMakesFun.rawValue
         
         //Set up a time-based trigger
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
         
         //Set up the request based on the trigger.
-        let request = UNNotificationRequest(identifier: parrot.gif.rawValue,
+        let request = UNNotificationRequest(identifier: resourceName,
                                             content: content,
                                             trigger: trigger)
         
