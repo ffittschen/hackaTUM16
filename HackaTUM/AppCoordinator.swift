@@ -17,7 +17,8 @@ protocol Coordinator {
 class AppCoordinator: NSObject, Coordinator {
     
     fileprivate let disposeBag: DisposeBag
-    fileprivate let homeTabCoordinator: HomeTabCoordinator
+    fileprivate let firstTabCoordinator: FirstTabCoordinator
+    fileprivate let scannerTabCoordinator: QRScannerTabViewCoordinator
     private var tabBarController: UITabBarController
     private var tabs: [TabCoordinator]
     
@@ -25,8 +26,9 @@ class AppCoordinator: NSObject, Coordinator {
         self.tabBarController = tabBarController
         
         disposeBag = DisposeBag()
-        homeTabCoordinator = HomeTabCoordinator()
-        tabs = [homeTabCoordinator]
+   		homeTabCoordinator = HomeTabCoordinator()
+		scannerTabCoordinator = QRScannerTabViewCoordinator()
+    	tabs = [homeTabCoordinator, scannerTabCoordinator]
         
         super.init()
     }
