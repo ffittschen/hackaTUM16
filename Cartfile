@@ -7,8 +7,14 @@ github "emaloney/CleanroomLogger" ~> 3.0
 # Resources
 github "mac-cain13/R.swift.Library" ~> 3.0
 
-#QR-Code Scanner
+# QR-Code Scanner
 github "yannickl/QRCodeReader.swift" >= 7.2.0
+
+# Initialize UIColor with hex values
+github "hyperoslo/Hue" ~> 2.0
+
+# Azure mobile SDK
+github "Azure/azure-mobile-apps-ios-client"
 
 # Fun Level Meter
 github "mpiccinato/GaugeView" ~> 0.1

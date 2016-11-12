@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import Hue
 
 protocol Coordinator {
     func start()
@@ -24,6 +25,7 @@ class AppCoordinator: NSObject, Coordinator {
     
     required init(tabBarController: UITabBarController) {
         self.tabBarController = tabBarController
+        self.tabBarController.tabBar.tintColor = UIColor(hex: "df0000")
         
         disposeBag = DisposeBag()
    		homeTabCoordinator = HomeTabCoordinator()

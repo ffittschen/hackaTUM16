@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import UserNotifications
 import CleanroomLogger
+import MicrosoftAzureMobile
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private var rootViewController: UITabBarController?
     private var coordinator: AppCoordinator?
+    private var notificationHandler: VersionSpecificNotificationHandler?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -31,6 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
+        
+        notificationHandler = NotificationHandler()
+        
+        // Clear application badge when launching the app
+        application.applicationIconBadgeNumber = 0
         
         return true
     }
@@ -56,7 +64,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    //MARK: - registering for push notifications
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        notificationHandler?.successfullyRegisteredForNotifications(deviceToken: deviceToken)
+    }
 
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        notificationHandler?.failedToRegisterForNotifications(error: error)
+    }
+    
+    //MARK: - Background notification handling
+    func application(_ application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Swift.Void) {
+        notificationHandler?.application(application,
+                                         didReceiveRemoteNotification: userInfo,
+                                         fetchCompletionHandler: completionHandler)
+    }
 
 }
-

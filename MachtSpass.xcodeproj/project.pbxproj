@@ -29,6 +29,13 @@
 		04173F2F1DD5E6A400F22E67 /* HomeTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F2E1DD5E6A400F22E67 /* HomeTabCoordinator.swift */; };
 		04173F311DD5E72E00F22E67 /* HomeTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F301DD5E72E00F22E67 /* HomeTabViewModel.swift */; };
 		04173F351DD5E86D00F22E67 /* HomeTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04173F331DD5E86D00F22E67 /* HomeTabViewController.xib */; };
+		04737E4B1DD7711B003C89F7 /* Hue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04737E4A1DD7711B003C89F7 /* Hue.framework */; };
+		04737E531DD7A3E6003C89F7 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04737E521DD7A3E6003C89F7 /* MicrosoftAzureMobile.framework */; };
+		04D2CE4D1DD7AB5F00F009A0 /* VersionSpecificNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE4C1DD7AB5F00F009A0 /* VersionSpecificNotificationHandler.swift */; };
+		04D2CE4F1DD7ADCF00F009A0 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE4E1DD7ADCF00F009A0 /* NotificationHandler.swift */; };
+		04D2CE511DD7AE2800F009A0 /* MachtSpassAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE501DD7AE2800F009A0 /* MachtSpassAction.swift */; };
+		04D2CE531DD7B15B00F009A0 /* AzureClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE521DD7B15B00F009A0 /* AzureClient.swift */; };
+		04D2CE561DD7B38700F009A0 /* MachtSpass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE551DD7B38700F009A0 /* MachtSpass.swift */; };
 		C45E81391DD7394400A34143 /* QRScannerTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E81371DD7394400A34143 /* QRScannerTabViewController.swift */; };
 		C45E813A1DD7394400A34143 /* QRScannerTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45E81381DD7394400A34143 /* QRScannerTabViewController.xib */; };
 		C45E813C1DD744F900A34143 /* QRScannerTabViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */; };
@@ -98,6 +105,14 @@
 		04173F2E1DD5E6A400F22E67 /* HomeTabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabCoordinator.swift; sourceTree = "<group>"; };
 		04173F301DD5E72E00F22E67 /* HomeTabViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabViewModel.swift; sourceTree = "<group>"; };
 		04173F331DD5E86D00F22E67 /* HomeTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTabViewController.xib; sourceTree = "<group>"; };
+		04737E4A1DD7711B003C89F7 /* Hue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hue.framework; path = Carthage/Build/iOS/Hue.framework; sourceTree = "<group>"; };
+		04737E511DD77B9B003C89F7 /* MachtSpass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MachtSpass.entitlements; sourceTree = "<group>"; };
+		04737E521DD7A3E6003C89F7 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicrosoftAzureMobile.framework; path = Carthage/Build/iOS/MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		04D2CE4C1DD7AB5F00F009A0 /* VersionSpecificNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSpecificNotificationHandler.swift; sourceTree = "<group>"; };
+		04D2CE4E1DD7ADCF00F009A0 /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		04D2CE501DD7AE2800F009A0 /* MachtSpassAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachtSpassAction.swift; sourceTree = "<group>"; };
+		04D2CE521DD7B15B00F009A0 /* AzureClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzureClient.swift; sourceTree = "<group>"; };
+		04D2CE551DD7B38700F009A0 /* MachtSpass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachtSpass.swift; sourceTree = "<group>"; };
 		C45E81371DD7394400A34143 /* QRScannerTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerTabViewController.swift; sourceTree = "<group>"; };
 		C45E81381DD7394400A34143 /* QRScannerTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScannerTabViewController.xib; sourceTree = "<group>"; };
 		C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerTabViewCoordinator.swift; sourceTree = "<group>"; };
@@ -121,12 +136,14 @@
 				04173F1E1DD5E58600F22E67 /* Alamofire.framework in Frameworks */,
 				04173F1F1DD5E58600F22E67 /* CleanroomASL.framework in Frameworks */,
 				04173F201DD5E58600F22E67 /* CleanroomLogger.framework in Frameworks */,
+				04737E4B1DD7711B003C89F7 /* Hue.framework in Frameworks */,
 				04173F211DD5E58600F22E67 /* Moya.framework in Frameworks */,
 				04173F221DD5E58600F22E67 /* Result.framework in Frameworks */,
 				04173F231DD5E58600F22E67 /* Rswift.framework in Frameworks */,
 				04173F241DD5E58600F22E67 /* RxCocoa.framework in Frameworks */,
 				04173F251DD5E58600F22E67 /* RxMoya.framework in Frameworks */,
 				04173F261DD5E58600F22E67 /* RxSwift.framework in Frameworks */,
+				04737E531DD7A3E6003C89F7 /* MicrosoftAzureMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,11 +188,13 @@
 		04173ECE1DD5DBB300F22E67 /* MachtSpass */ = {
 			isa = PBXGroup;
 			children = (
+				04737E511DD77B9B003C89F7 /* MachtSpass.entitlements */,
 				04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */,
 				04173EFE1DD5DC4800F22E67 /* AppCoordinator.swift */,
 				04173F291DD5E5BC00F22E67 /* TabCoordinator.swift */,
 				C4B4CF9D1DD75468006CA897 /* Supporting Files */,
 				04173F2D1DD5E5D600F22E67 /* Network */,
+				04D2CE541DD7B37C00F009A0 /* Model */,
 				04173EFD1DD5DC0A00F22E67 /* Features */,
 			);
 			path = MachtSpass;
@@ -211,6 +230,8 @@
 		04173F001DD5E00400F22E67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04737E521DD7A3E6003C89F7 /* MicrosoftAzureMobile.framework */,
+				04737E4A1DD7711B003C89F7 /* Hue.framework */,
 				C45E813F1DD74A8500A34143 /* QRCodeReader.framework */,
 				04173F151DD5E58600F22E67 /* Alamofire.framework */,
 				04173F161DD5E58600F22E67 /* CleanroomASL.framework */,
@@ -238,6 +259,10 @@
 			isa = PBXGroup;
 			children = (
 				04173F2B1DD5E5D200F22E67 /* Backend.swift */,
+				04D2CE4C1DD7AB5F00F009A0 /* VersionSpecificNotificationHandler.swift */,
+				04D2CE4E1DD7ADCF00F009A0 /* NotificationHandler.swift */,
+				04D2CE501DD7AE2800F009A0 /* MachtSpassAction.swift */,
+				04D2CE521DD7B15B00F009A0 /* AzureClient.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -251,6 +276,14 @@
 				04173F301DD5E72E00F22E67 /* HomeTabViewModel.swift */,
 			);
 			name = HomeTab;
+			sourceTree = "<group>";
+		};
+		04D2CE541DD7B37C00F009A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04D2CE551DD7B38700F009A0 /* MachtSpass.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		C45E81361DD7384D00A34143 /* QRScannerTab */ = {
@@ -352,8 +385,14 @@
 				TargetAttributes = {
 					04173ECB1DD5DBB300F22E67 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = ***REMOVED***;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = "";
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					04173EDF1DD5DBB300F22E67 = {
 						CreatedOnToolsVersion = 8.1;
@@ -434,6 +473,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/QRCodeReader.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Hue.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MicrosoftAzureMobile.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -464,11 +505,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				04173F2A1DD5E5BC00F22E67 /* TabCoordinator.swift in Sources */,
+				04D2CE4D1DD7AB5F00F009A0 /* VersionSpecificNotificationHandler.swift in Sources */,
+				04D2CE561DD7B38700F009A0 /* MachtSpass.swift in Sources */,
 				04173EFF1DD5DC4800F22E67 /* AppCoordinator.swift in Sources */,
 				C4B4CF9F1DD7548B006CA897 /* UIDevice+isSimulator.swift in Sources */,
 				04173F2F1DD5E6A400F22E67 /* HomeTabCoordinator.swift in Sources */,
 				C45E813C1DD744F900A34143 /* QRScannerTabViewCoordinator.swift in Sources */,
 				C45E813E1DD7450400A34143 /* QRScannerTabViewModel.swift in Sources */,
+				04D2CE531DD7B15B00F009A0 /* AzureClient.swift in Sources */,
 				04173F2C1DD5E5D200F22E67 /* Backend.swift in Sources */,
 				C4B4CFA21DD756A6006CA897 /* ScanResultsViewController.swift in Sources */,
 				04173ED21DD5DBB300F22E67 /* HomeTabViewController.swift in Sources */,
@@ -479,6 +523,8 @@
 				C4E4F1431DD77BDD00C487A4 /* TestProduct.swift in Sources */,
 				04173ED01DD5DBB300F22E67 /* AppDelegate.swift in Sources */,
 				04173F281DD5E59A00F22E67 /* R.generated.swift in Sources */,
+				04D2CE511DD7AE2800F009A0 /* MachtSpassAction.swift in Sources */,
+				04D2CE4F1DD7ADCF00F009A0 /* NotificationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,16 +668,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MachtSpass/MachtSpass.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ***REMOVED***;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MachtSpass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "com.fittschen.machtSpass Development";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -640,16 +692,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ***REMOVED***;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MachtSpass/MachtSpass.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MachtSpass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "com.fittschen.machtSpass AppStore";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
