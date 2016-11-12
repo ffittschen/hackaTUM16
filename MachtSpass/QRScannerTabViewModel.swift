@@ -28,9 +28,14 @@ extension QRScannerTabViewModel {
 }
 
 extension QRScannerTabViewModel: QRCodeReaderViewControllerDelegate {
+    //  Just for debugging in the simulator
+    func testPseudoQRCode() {
+        self.qrContent.value = "123456789"
+    }
+    
+    //  Scanner has read QR-code
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
-        print(#function)
-        print(result)
+        self.qrContent.value = result.value
     }
     
     func readerDidCancel(_ reader: QRCodeReaderViewController) {

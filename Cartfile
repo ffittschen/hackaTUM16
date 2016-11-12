@@ -9,3 +9,6 @@ github "mac-cain13/R.swift.Library" ~> 3.0
 
 #QR-Code Scanner
 github "yannickl/QRCodeReader.swift" >= 7.2.0
+
+# Fun Level Meter
+github "mpiccinato/GaugeView" ~> 0.1

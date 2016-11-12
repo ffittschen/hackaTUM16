@@ -18,8 +18,12 @@ class HomeTabCoordinator: NSObject, TabCoordinator {
     fileprivate let viewController: HomeTabViewController
     
     override init() {
+<<<<<<< Updated upstream:MachtSpass/HomeTabCoordinator.swift
         tabBarItem = UITabBarItem(title: "Home", image: nil, selectedImage: nil)
+=======
+        tabBarItem = UITabBarItem(title: "First", image: nil, selectedImage: nil)
         tabBarItem.image = #imageLiteral(resourceName: "HomeTabIcon")
+>>>>>>> Stashed changes:HackaTUM/HomeTabCoordinator.swift
         
         viewModel = HomeTabViewModel(funBucks: 42)
         viewController = HomeTabViewController(viewModel: viewModel)

@@ -28,7 +28,7 @@ class QRScannerTabViewController: UIViewController {
         
         disposeBag = DisposeBag()
         
-        super.init(nibName: R.nib.qRScannerTabViewController.name, bundle: nil)
+        super.init(nibName: R.nib.homeTabViewController.name, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,22 +38,25 @@ class QRScannerTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //  just for dwbugging on the simulator which has no camera
+<<<<<<< Updated upstream:MachtSpass/QRScannerTabViewController.swift
+        viewModel.qrContentValue
+            .bindTo(testLabel.rx.text)
+            .addDisposableTo(disposeBag)
+        
+=======
+>>>>>>> Stashed changes:HackaTUM/QRScannerTabViewController.swift
+        self.view.addSubview(readerVC.view)
+        self.view.leadingAnchor.constraint(equalTo: readerVC.view.leadingAnchor).isActive = true
+        self.view.trailingAnchor.constraint(equalTo: readerVC.view.trailingAnchor).isActive = true
+        self.view.layoutMarginsGuide.topAnchor.constraint(equalTo: readerVC.view.topAnchor).isActive = true
+        self.view.layoutMarginsGuide.bottomAnchor.constraint(equalTo: readerVC.view.bottomAnchor).isActive = true
+        
         if UIDevice.isSimulator {
-            let _ = Timer.init(fire: Date().addingTimeInterval(500), interval: 0, repeats: false, block: { (timer) in
+            Timer.init(fire: Date().addingTimeInterval(500), interval: 0, repeats: false, block: { (timer) in
                 print("Set Test Code.")
                 self.viewModel.testPseudoQRCode()
-            })
+            }).fire()
         } else {
-            
-            //  Add and expand qrCodeScan View
-            self.view.addSubview(readerVC.view)
-            self.view.leadingAnchor.constraint(equalTo: readerVC.view.leadingAnchor).isActive = true
-            self.view.trailingAnchor.constraint(equalTo: readerVC.view.trailingAnchor).isActive = true
-            self.view.layoutMarginsGuide.topAnchor.constraint(equalTo: readerVC.view.topAnchor).isActive = true
-            self.view.layoutMarginsGuide.bottomAnchor.constraint(equalTo: readerVC.view.bottomAnchor).isActive = true
-        
-            //  Start scanning 
             readerVC.delegate = self.viewModel
             readerVC.startScanning()
         }

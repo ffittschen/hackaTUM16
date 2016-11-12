@@ -30,10 +30,15 @@
 		04173F311DD5E72E00F22E67 /* HomeTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F301DD5E72E00F22E67 /* HomeTabViewModel.swift */; };
 		04173F351DD5E86D00F22E67 /* HomeTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04173F331DD5E86D00F22E67 /* HomeTabViewController.xib */; };
 		C45E81391DD7394400A34143 /* QRScannerTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E81371DD7394400A34143 /* QRScannerTabViewController.swift */; };
-		C45E813A1DD7394400A34143 /* QRScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45E81381DD7394400A34143 /* QRScannerViewController.xib */; };
+		C45E813A1DD7394400A34143 /* QRScannerTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45E81381DD7394400A34143 /* QRScannerTabViewController.xib */; };
 		C45E813C1DD744F900A34143 /* QRScannerTabViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */; };
 		C45E813E1DD7450400A34143 /* QRScannerTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E813D1DD7450400A34143 /* QRScannerTabViewModel.swift */; };
 		C45E81401DD74A8500A34143 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45E813F1DD74A8500A34143 /* QRCodeReader.framework */; };
+		C49D548E1DD7657000FCEE74 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D548D1DD7657000FCEE74 /* GaugeView.swift */; };
+		C4B4CF9F1DD7548B006CA897 /* UIDevice+isSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B4CF9E1DD7548B006CA897 /* UIDevice+isSimulator.swift */; };
+		C4B4CFA21DD756A6006CA897 /* ScanResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B4CFA01DD756A6006CA897 /* ScanResultsViewController.swift */; };
+		C4B4CFA31DD756A6006CA897 /* ScanResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B4CFA11DD756A6006CA897 /* ScanResultsViewController.xib */; };
+		C4B4CFA51DD757F4006CA897 /* ScanResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B4CFA41DD757F4006CA897 /* ScanResultsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,10 +97,15 @@
 		04173F301DD5E72E00F22E67 /* HomeTabViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabViewModel.swift; sourceTree = "<group>"; };
 		04173F331DD5E86D00F22E67 /* HomeTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTabViewController.xib; sourceTree = "<group>"; };
 		C45E81371DD7394400A34143 /* QRScannerTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerTabViewController.swift; sourceTree = "<group>"; };
-		C45E81381DD7394400A34143 /* QRScannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScannerViewController.xib; sourceTree = "<group>"; };
+		C45E81381DD7394400A34143 /* QRScannerTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScannerTabViewController.xib; sourceTree = "<group>"; };
 		C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerTabViewCoordinator.swift; sourceTree = "<group>"; };
 		C45E813D1DD7450400A34143 /* QRScannerTabViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerTabViewModel.swift; sourceTree = "<group>"; };
 		C45E813F1DD74A8500A34143 /* QRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QRCodeReader.framework; path = Carthage/Build/iOS/QRCodeReader.framework; sourceTree = "<group>"; };
+		C49D548D1DD7657000FCEE74 /* GaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
+		C4B4CF9E1DD7548B006CA897 /* UIDevice+isSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+isSimulator.swift"; sourceTree = "<group>"; };
+		C4B4CFA01DD756A6006CA897 /* ScanResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanResultsViewController.swift; sourceTree = "<group>"; };
+		C4B4CFA11DD756A6006CA897 /* ScanResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanResultsViewController.xib; sourceTree = "<group>"; };
+		C4B4CFA41DD757F4006CA897 /* ScanResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanResultsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,12 +170,9 @@
 				04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */,
 				04173EFE1DD5DC4800F22E67 /* AppCoordinator.swift */,
 				04173F291DD5E5BC00F22E67 /* TabCoordinator.swift */,
+				C4B4CF9D1DD75468006CA897 /* Supporting Files */,
 				04173F2D1DD5E5D600F22E67 /* Network */,
 				04173EFD1DD5DC0A00F22E67 /* Features */,
-				04173ED61DD5DBB300F22E67 /* Assets.xcassets */,
-				04173ED81DD5DBB300F22E67 /* LaunchScreen.storyboard */,
-				04173EDB1DD5DBB300F22E67 /* Info.plist */,
-				04173F271DD5E59A00F22E67 /* R.generated.swift */,
 			);
 			path = MachtSpass;
 			sourceTree = "<group>";
@@ -245,12 +252,28 @@
 		C45E81361DD7384D00A34143 /* QRScannerTab */ = {
 			isa = PBXGroup;
 			children = (
-				C45E81371DD7394400A34143 /* QRScannerTabViewController.swift */,
-				C45E81381DD7394400A34143 /* QRScannerViewController.xib */,
 				C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */,
+				C45E81371DD7394400A34143 /* QRScannerTabViewController.swift */,
+				C45E81381DD7394400A34143 /* QRScannerTabViewController.xib */,
 				C45E813D1DD7450400A34143 /* QRScannerTabViewModel.swift */,
+				C4B4CFA01DD756A6006CA897 /* ScanResultsViewController.swift */,
+				C4B4CFA11DD756A6006CA897 /* ScanResultsViewController.xib */,
+				C4B4CFA41DD757F4006CA897 /* ScanResultsViewModel.swift */,
 			);
 			name = QRScannerTab;
+			sourceTree = "<group>";
+		};
+		C4B4CF9D1DD75468006CA897 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C49D548D1DD7657000FCEE74 /* GaugeView.swift */,
+				04173ED61DD5DBB300F22E67 /* Assets.xcassets */,
+				04173ED81DD5DBB300F22E67 /* LaunchScreen.storyboard */,
+				04173EDB1DD5DBB300F22E67 /* Info.plist */,
+				04173F271DD5E59A00F22E67 /* R.generated.swift */,
+				C4B4CF9E1DD7548B006CA897 /* UIDevice+isSimulator.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,10 +385,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C45E813A1DD7394400A34143 /* QRScannerViewController.xib in Resources */,
+				C45E813A1DD7394400A34143 /* QRScannerTabViewController.xib in Resources */,
 				04173EDA1DD5DBB300F22E67 /* LaunchScreen.storyboard in Resources */,
 				04173F351DD5E86D00F22E67 /* HomeTabViewController.xib in Resources */,
 				04173ED71DD5DBB300F22E67 /* Assets.xcassets in Resources */,
+				C4B4CFA31DD756A6006CA897 /* ScanResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,12 +457,16 @@
 			files = (
 				04173F2A1DD5E5BC00F22E67 /* TabCoordinator.swift in Sources */,
 				04173EFF1DD5DC4800F22E67 /* AppCoordinator.swift in Sources */,
+				C4B4CF9F1DD7548B006CA897 /* UIDevice+isSimulator.swift in Sources */,
 				04173F2F1DD5E6A400F22E67 /* HomeTabCoordinator.swift in Sources */,
 				C45E813C1DD744F900A34143 /* QRScannerTabViewCoordinator.swift in Sources */,
 				C45E813E1DD7450400A34143 /* QRScannerTabViewModel.swift in Sources */,
 				04173F2C1DD5E5D200F22E67 /* Backend.swift in Sources */,
+				C4B4CFA21DD756A6006CA897 /* ScanResultsViewController.swift in Sources */,
 				04173ED21DD5DBB300F22E67 /* HomeTabViewController.swift in Sources */,
 				04173F311DD5E72E00F22E67 /* HomeTabViewModel.swift in Sources */,
+				C49D548E1DD7657000FCEE74 /* GaugeView.swift in Sources */,
+				C4B4CFA51DD757F4006CA897 /* ScanResultsViewModel.swift in Sources */,
 				C45E81391DD7394400A34143 /* QRScannerTabViewController.swift in Sources */,
 				04173ED01DD5DBB300F22E67 /* AppDelegate.swift in Sources */,
 				04173F281DD5E59A00F22E67 /* R.generated.swift in Sources */,
