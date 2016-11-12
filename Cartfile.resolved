@@ -1,5 +1,6 @@
 github "Alamofire/Alamofire" "4.0.1"
 github "emaloney/CleanroomASL" "2.0.0"
+github "bignerdranch/Freddy" "3.0.1"
 github "mpiccinato/GaugeView" "0.1"
 github "yannickl/QRCodeReader.swift" "7.2.0"
 github "mac-cain13/R.swift.Library" "v3.0.2"

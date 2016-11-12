@@ -12,3 +12,6 @@ github "yannickl/QRCodeReader.swift" >= 7.2.0
 
 # Fun Level Meter
 github "mpiccinato/GaugeView" ~> 0.1
+
+# JSON Parser 
+github "bignerdranch/Freddy" ~> 3.0
