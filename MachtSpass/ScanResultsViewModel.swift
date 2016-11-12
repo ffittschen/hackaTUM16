@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import QRCodeReader
 import AVFoundation
+import UserNotifications
 
 class ScanResultsViewModel: NSObject {
     fileprivate let disposeBag: DisposeBag
@@ -22,8 +23,19 @@ class ScanResultsViewModel: NSObject {
     }
 }
 
-extension ScanResultsViewModel {
-    
+extension ScanResultsViewModel: ScanResultsViewControllerDelegate {
+    func didTouchMakesFunButton() {
+        //  Request server to send notifications to the right users 
+        
+        //  ... 
+        
+        
+        
+        
+        
+        //  Testing Notifications
+
+    }
 }
 
 //  Data source for detail table

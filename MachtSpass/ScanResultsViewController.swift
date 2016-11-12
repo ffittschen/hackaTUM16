@@ -12,10 +12,16 @@ import RxCocoa
 import AVFoundation
 import QRCodeReader
 
+protocol ScanResultsViewControllerDelegate {
+    func didTouchMakesFunButton()
+}
+
 class ScanResultsViewController: UIViewController {
     
     fileprivate let disposeBag: DisposeBag
     fileprivate let viewModel: ScanResultsViewModel
+    
+    var delegate: ScanResultsViewControllerDelegate!
     
     @IBOutlet var productImageView: UIImageView!
     @IBOutlet var productNameLabel: UILabel!
@@ -25,6 +31,7 @@ class ScanResultsViewController: UIViewController {
     
     init(viewModel: ScanResultsViewModel) {
         self.viewModel = viewModel
+        self.delegate = viewModel
         
         disposeBag = DisposeBag()
         
