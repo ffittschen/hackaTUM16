@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04173ED01DD5DBB300F22E67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */; };
-		04173ED21DD5DBB300F22E67 /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173ED11DD5DBB300F22E67 /* FirstTabViewController.swift */; };
+		04173ED21DD5DBB300F22E67 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173ED11DD5DBB300F22E67 /* HomeTabViewController.swift */; };
 		04173ED71DD5DBB300F22E67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04173ED61DD5DBB300F22E67 /* Assets.xcassets */; };
 		04173EDA1DD5DBB300F22E67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04173ED81DD5DBB300F22E67 /* LaunchScreen.storyboard */; };
 		04173EE51DD5DBB300F22E67 /* HackaTUMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173EE41DD5DBB300F22E67 /* HackaTUMTests.swift */; };
@@ -26,9 +26,9 @@
 		04173F281DD5E59A00F22E67 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F271DD5E59A00F22E67 /* R.generated.swift */; };
 		04173F2A1DD5E5BC00F22E67 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F291DD5E5BC00F22E67 /* TabCoordinator.swift */; };
 		04173F2C1DD5E5D200F22E67 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F2B1DD5E5D200F22E67 /* Backend.swift */; };
-		04173F2F1DD5E6A400F22E67 /* FirstTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F2E1DD5E6A400F22E67 /* FirstTabCoordinator.swift */; };
-		04173F311DD5E72E00F22E67 /* FirstTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F301DD5E72E00F22E67 /* FirstTabViewModel.swift */; };
-		04173F351DD5E86D00F22E67 /* FirstTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04173F331DD5E86D00F22E67 /* FirstTabViewController.xib */; };
+		04173F2F1DD5E6A400F22E67 /* HomeTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F2E1DD5E6A400F22E67 /* HomeTabCoordinator.swift */; };
+		04173F311DD5E72E00F22E67 /* HomeTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F301DD5E72E00F22E67 /* HomeTabViewModel.swift */; };
+		04173F351DD5E86D00F22E67 /* HomeTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04173F331DD5E86D00F22E67 /* HomeTabViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,7 @@
 /* Begin PBXFileReference section */
 		04173ECC1DD5DBB300F22E67 /* HackaTUM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackaTUM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04173ED11DD5DBB300F22E67 /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
+		04173ED11DD5DBB300F22E67 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		04173ED61DD5DBB300F22E67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04173ED91DD5DBB300F22E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04173EDB1DD5DBB300F22E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,9 +83,9 @@
 		04173F271DD5E59A00F22E67 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		04173F291DD5E5BC00F22E67 /* TabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
 		04173F2B1DD5E5D200F22E67 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
-		04173F2E1DD5E6A400F22E67 /* FirstTabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTabCoordinator.swift; sourceTree = "<group>"; };
-		04173F301DD5E72E00F22E67 /* FirstTabViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTabViewModel.swift; sourceTree = "<group>"; };
-		04173F331DD5E86D00F22E67 /* FirstTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTabViewController.xib; sourceTree = "<group>"; };
+		04173F2E1DD5E6A400F22E67 /* HomeTabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabCoordinator.swift; sourceTree = "<group>"; };
+		04173F301DD5E72E00F22E67 /* HomeTabViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabViewModel.swift; sourceTree = "<group>"; };
+		04173F331DD5E86D00F22E67 /* HomeTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTabViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +180,7 @@
 		04173EFD1DD5DC0A00F22E67 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				04173F361DD5E90C00F22E67 /* FirstTab */,
+				04173F361DD5E90C00F22E67 /* HomeTab */,
 			);
 			name = Features;
 			sourceTree = "<group>";
@@ -218,15 +218,15 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		04173F361DD5E90C00F22E67 /* FirstTab */ = {
+		04173F361DD5E90C00F22E67 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
-				04173ED11DD5DBB300F22E67 /* FirstTabViewController.swift */,
-				04173F331DD5E86D00F22E67 /* FirstTabViewController.xib */,
-				04173F2E1DD5E6A400F22E67 /* FirstTabCoordinator.swift */,
-				04173F301DD5E72E00F22E67 /* FirstTabViewModel.swift */,
+				04173ED11DD5DBB300F22E67 /* HomeTabViewController.swift */,
+				04173F331DD5E86D00F22E67 /* HomeTabViewController.xib */,
+				04173F2E1DD5E6A400F22E67 /* HomeTabCoordinator.swift */,
+				04173F301DD5E72E00F22E67 /* HomeTabViewModel.swift */,
 			);
-			name = FirstTab;
+			name = HomeTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,7 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04173EDA1DD5DBB300F22E67 /* LaunchScreen.storyboard in Resources */,
-				04173F351DD5E86D00F22E67 /* FirstTabViewController.xib in Resources */,
+				04173F351DD5E86D00F22E67 /* HomeTabViewController.xib in Resources */,
 				04173ED71DD5DBB300F22E67 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,10 +407,10 @@
 			files = (
 				04173F2A1DD5E5BC00F22E67 /* TabCoordinator.swift in Sources */,
 				04173EFF1DD5DC4800F22E67 /* AppCoordinator.swift in Sources */,
-				04173F2F1DD5E6A400F22E67 /* FirstTabCoordinator.swift in Sources */,
+				04173F2F1DD5E6A400F22E67 /* HomeTabCoordinator.swift in Sources */,
 				04173F2C1DD5E5D200F22E67 /* Backend.swift in Sources */,
-				04173ED21DD5DBB300F22E67 /* FirstTabViewController.swift in Sources */,
-				04173F311DD5E72E00F22E67 /* FirstTabViewModel.swift in Sources */,
+				04173ED21DD5DBB300F22E67 /* HomeTabViewController.swift in Sources */,
+				04173F311DD5E72E00F22E67 /* HomeTabViewModel.swift in Sources */,
 				04173ED01DD5DBB300F22E67 /* AppDelegate.swift in Sources */,
 				04173F281DD5E59A00F22E67 /* R.generated.swift in Sources */,
 			);

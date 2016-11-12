@@ -1,5 +1,5 @@
 //
-//  FirstTabViewController.swift
+//  HomeTabViewController.swift
 //  HackaTUM
 //
 //  Created by Florian Fittschen on 11/11/2016.
@@ -10,19 +10,26 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class FirstTabViewController: UIViewController {
+protocol HomeTabViewControllerDelegate {
+    func didPressRedeem()
+    func didPressGift()
+}
 
-    @IBOutlet weak var testLabel: UILabel!
+class HomeTabViewController: UIViewController {
+
+    @IBOutlet weak var funBucks: UILabel!
+    @IBOutlet weak var redeemButton: UIButton!
+    @IBOutlet weak var giftButton: UIButton!
     
     fileprivate let disposeBag: DisposeBag
-    fileprivate let viewModel: FirstTabViewModel
+    fileprivate let viewModel: HomeTabViewModel
     
-    init(viewModel: FirstTabViewModel) {
+    init(viewModel: HomeTabViewModel) {
         self.viewModel = viewModel
         
         disposeBag = DisposeBag()
         
-        super.init(nibName: R.nib.firstTabViewController.name, bundle: nil)
+        super.init(nibName: R.nib.homeTabViewController.name, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,8 +39,11 @@ class FirstTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.stringValue
-            .bindTo(testLabel.rx.text)
+        viewModel.funBucks
+            .map { intValue -> String? in
+                return "\(intValue)"
+            }
+            .bindTo(funBucks.rx.text)
             .addDisposableTo(disposeBag)
     }
 

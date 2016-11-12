@@ -1,5 +1,5 @@
 //
-//  FirstTabCoordinator.swift
+//  HomeTabCoordinator.swift
 //  HackaTUM
 //
 //  Created by Florian Fittschen on 11/11/2016.
@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-class FirstTabCoordinator: NSObject, TabCoordinator {
+class HomeTabCoordinator: NSObject, TabCoordinator {
     
     let tabBarItem: UITabBarItem
     let navigationController: UINavigationController
-    var viewModel: FirstTabViewModel
+    var viewModel: HomeTabViewModel
     
-    fileprivate let viewController: FirstTabViewController
+    fileprivate let viewController: HomeTabViewController
     
     override init() {
         tabBarItem = UITabBarItem(title: "First", image: nil, selectedImage: nil)
         
-        viewModel = FirstTabViewModel(string: "Example")
-        viewController = FirstTabViewController(viewModel: viewModel)
+        viewModel = HomeTabViewModel(funBucks: 42)
+        viewController = HomeTabViewController(viewModel: viewModel)
         navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem = tabBarItem
         
