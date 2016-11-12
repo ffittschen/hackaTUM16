@@ -11,8 +11,8 @@
 		04173ED21DD5DBB300F22E67 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173ED11DD5DBB300F22E67 /* HomeTabViewController.swift */; };
 		04173ED71DD5DBB300F22E67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04173ED61DD5DBB300F22E67 /* Assets.xcassets */; };
 		04173EDA1DD5DBB300F22E67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04173ED81DD5DBB300F22E67 /* LaunchScreen.storyboard */; };
-		04173EE51DD5DBB300F22E67 /* HackaTUMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173EE41DD5DBB300F22E67 /* HackaTUMTests.swift */; };
-		04173EF01DD5DBB400F22E67 /* HackaTUMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173EEF1DD5DBB400F22E67 /* HackaTUMUITests.swift */; };
+		04173EE51DD5DBB300F22E67 /* MachtSpassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173EE41DD5DBB300F22E67 /* MachtSpassTests.swift */; };
+		04173EF01DD5DBB400F22E67 /* MachtSpassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173EEF1DD5DBB400F22E67 /* MachtSpassUITests.swift */; };
 		04173EFF1DD5DC4800F22E67 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173EFE1DD5DC4800F22E67 /* AppCoordinator.swift */; };
 		04173F1E1DD5E58600F22E67 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F151DD5E58600F22E67 /* Alamofire.framework */; };
 		04173F1F1DD5E58600F22E67 /* CleanroomASL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F161DD5E58600F22E67 /* CleanroomASL.framework */; };
@@ -42,29 +42,29 @@
 			containerPortal = 04173EC41DD5DBB300F22E67 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 04173ECB1DD5DBB300F22E67;
-			remoteInfo = HackaTUM;
+			remoteInfo = MachtSpass;
 		};
 		04173EEC1DD5DBB400F22E67 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04173EC41DD5DBB300F22E67 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 04173ECB1DD5DBB300F22E67;
-			remoteInfo = HackaTUM;
+			remoteInfo = MachtSpass;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04173ECC1DD5DBB300F22E67 /* HackaTUM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackaTUM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04173ECC1DD5DBB300F22E67 /* MachtSpass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MachtSpass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04173ED11DD5DBB300F22E67 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		04173ED61DD5DBB300F22E67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04173ED91DD5DBB300F22E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04173EDB1DD5DBB300F22E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04173EE01DD5DBB300F22E67 /* HackaTUMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackaTUMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04173EE41DD5DBB300F22E67 /* HackaTUMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackaTUMTests.swift; sourceTree = "<group>"; };
+		04173EE01DD5DBB300F22E67 /* MachtSpassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MachtSpassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04173EE41DD5DBB300F22E67 /* MachtSpassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachtSpassTests.swift; sourceTree = "<group>"; };
 		04173EE61DD5DBB300F22E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04173EEB1DD5DBB400F22E67 /* HackaTUMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackaTUMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04173EEF1DD5DBB400F22E67 /* HackaTUMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackaTUMUITests.swift; sourceTree = "<group>"; };
+		04173EEB1DD5DBB400F22E67 /* MachtSpassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MachtSpassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04173EEF1DD5DBB400F22E67 /* MachtSpassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachtSpassUITests.swift; sourceTree = "<group>"; };
 		04173EF11DD5DBB400F22E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04173EFE1DD5DC4800F22E67 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		04173F011DD5E00400F22E67 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 		04173EC31DD5DBB300F22E67 = {
 			isa = PBXGroup;
 			children = (
-				04173ECE1DD5DBB300F22E67 /* HackaTUM */,
-				04173EE31DD5DBB300F22E67 /* HackaTUMTests */,
-				04173EEE1DD5DBB400F22E67 /* HackaTUMUITests */,
+				04173ECE1DD5DBB300F22E67 /* MachtSpass */,
+				04173EE31DD5DBB300F22E67 /* MachtSpassTests */,
+				04173EEE1DD5DBB400F22E67 /* MachtSpassUITests */,
 				04173ECD1DD5DBB300F22E67 /* Products */,
 				04173F001DD5E00400F22E67 /* Frameworks */,
 			);
@@ -147,14 +147,14 @@
 		04173ECD1DD5DBB300F22E67 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04173ECC1DD5DBB300F22E67 /* HackaTUM.app */,
-				04173EE01DD5DBB300F22E67 /* HackaTUMTests.xctest */,
-				04173EEB1DD5DBB400F22E67 /* HackaTUMUITests.xctest */,
+				04173ECC1DD5DBB300F22E67 /* MachtSpass.app */,
+				04173EE01DD5DBB300F22E67 /* MachtSpassTests.xctest */,
+				04173EEB1DD5DBB400F22E67 /* MachtSpassUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		04173ECE1DD5DBB300F22E67 /* HackaTUM */ = {
+		04173ECE1DD5DBB300F22E67 /* MachtSpass */ = {
 			isa = PBXGroup;
 			children = (
 				04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */,
@@ -167,31 +167,31 @@
 				04173EDB1DD5DBB300F22E67 /* Info.plist */,
 				04173F271DD5E59A00F22E67 /* R.generated.swift */,
 			);
-			path = HackaTUM;
+			path = MachtSpass;
 			sourceTree = "<group>";
 		};
-		04173EE31DD5DBB300F22E67 /* HackaTUMTests */ = {
+		04173EE31DD5DBB300F22E67 /* MachtSpassTests */ = {
 			isa = PBXGroup;
 			children = (
-				04173EE41DD5DBB300F22E67 /* HackaTUMTests.swift */,
+				04173EE41DD5DBB300F22E67 /* MachtSpassTests.swift */,
 				04173EE61DD5DBB300F22E67 /* Info.plist */,
 			);
-			path = HackaTUMTests;
+			path = MachtSpassTests;
 			sourceTree = "<group>";
 		};
-		04173EEE1DD5DBB400F22E67 /* HackaTUMUITests */ = {
+		04173EEE1DD5DBB400F22E67 /* MachtSpassUITests */ = {
 			isa = PBXGroup;
 			children = (
-				04173EEF1DD5DBB400F22E67 /* HackaTUMUITests.swift */,
+				04173EEF1DD5DBB400F22E67 /* MachtSpassUITests.swift */,
 				04173EF11DD5DBB400F22E67 /* Info.plist */,
 			);
-			path = HackaTUMUITests;
+			path = MachtSpassUITests;
 			sourceTree = "<group>";
 		};
 		04173EFD1DD5DC0A00F22E67 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				04173F361DD5E90C00F22E67 /* FirstTab */,
+				04173F361DD5E90C00F22E67 /* HomeTab */,
 				C45E81361DD7384D00A34143 /* QRScannerTab */,
 			);
 			name = Features;
@@ -234,9 +234,9 @@
 		04173F361DD5E90C00F22E67 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
+				04173F2E1DD5E6A400F22E67 /* HomeTabCoordinator.swift */,
 				04173ED11DD5DBB300F22E67 /* HomeTabViewController.swift */,
 				04173F331DD5E86D00F22E67 /* HomeTabViewController.xib */,
-				04173F2E1DD5E6A400F22E67 /* HomeTabCoordinator.swift */,
 				04173F301DD5E72E00F22E67 /* HomeTabViewModel.swift */,
 			);
 			name = HomeTab;
@@ -256,9 +256,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04173ECB1DD5DBB300F22E67 /* HackaTUM */ = {
+		04173ECB1DD5DBB300F22E67 /* MachtSpass */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04173EF41DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUM" */;
+			buildConfigurationList = 04173EF41DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "MachtSpass" */;
 			buildPhases = (
 				04173F141DD5E42300F22E67 /* R.swift */,
 				04173EC81DD5DBB300F22E67 /* Sources */,
@@ -270,14 +270,14 @@
 			);
 			dependencies = (
 			);
-			name = HackaTUM;
-			productName = HackaTUM;
-			productReference = 04173ECC1DD5DBB300F22E67 /* HackaTUM.app */;
+			name = MachtSpass;
+			productName = MachtSpass;
+			productReference = 04173ECC1DD5DBB300F22E67 /* MachtSpass.app */;
 			productType = "com.apple.product-type.application";
 		};
-		04173EDF1DD5DBB300F22E67 /* HackaTUMTests */ = {
+		04173EDF1DD5DBB300F22E67 /* MachtSpassTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04173EF71DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUMTests" */;
+			buildConfigurationList = 04173EF71DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "MachtSpassTests" */;
 			buildPhases = (
 				04173EDC1DD5DBB300F22E67 /* Sources */,
 				04173EDD1DD5DBB300F22E67 /* Frameworks */,
@@ -288,14 +288,14 @@
 			dependencies = (
 				04173EE21DD5DBB300F22E67 /* PBXTargetDependency */,
 			);
-			name = HackaTUMTests;
-			productName = HackaTUMTests;
-			productReference = 04173EE01DD5DBB300F22E67 /* HackaTUMTests.xctest */;
+			name = MachtSpassTests;
+			productName = MachtSpassTests;
+			productReference = 04173EE01DD5DBB300F22E67 /* MachtSpassTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		04173EEA1DD5DBB400F22E67 /* HackaTUMUITests */ = {
+		04173EEA1DD5DBB400F22E67 /* MachtSpassUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04173EFA1DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUMUITests" */;
+			buildConfigurationList = 04173EFA1DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "MachtSpassUITests" */;
 			buildPhases = (
 				04173EE71DD5DBB400F22E67 /* Sources */,
 				04173EE81DD5DBB400F22E67 /* Frameworks */,
@@ -306,9 +306,9 @@
 			dependencies = (
 				04173EED1DD5DBB400F22E67 /* PBXTargetDependency */,
 			);
-			name = HackaTUMUITests;
-			productName = HackaTUMUITests;
-			productReference = 04173EEB1DD5DBB400F22E67 /* HackaTUMUITests.xctest */;
+			name = MachtSpassUITests;
+			productName = MachtSpassUITests;
+			productReference = 04173EEB1DD5DBB400F22E67 /* MachtSpassUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -323,7 +323,7 @@
 				TargetAttributes = {
 					04173ECB1DD5DBB300F22E67 = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					04173EDF1DD5DBB300F22E67 = {
 						CreatedOnToolsVersion = 8.1;
@@ -337,7 +337,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 04173EC71DD5DBB300F22E67 /* Build configuration list for PBXProject "HackaTUM" */;
+			buildConfigurationList = 04173EC71DD5DBB300F22E67 /* Build configuration list for PBXProject "MachtSpass" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -350,9 +350,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04173ECB1DD5DBB300F22E67 /* HackaTUM */,
-				04173EDF1DD5DBB300F22E67 /* HackaTUMTests */,
-				04173EEA1DD5DBB400F22E67 /* HackaTUMUITests */,
+				04173ECB1DD5DBB300F22E67 /* MachtSpass */,
+				04173EDF1DD5DBB300F22E67 /* MachtSpassTests */,
+				04173EEA1DD5DBB400F22E67 /* MachtSpassUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -449,7 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04173EE51DD5DBB300F22E67 /* HackaTUMTests.swift in Sources */,
+				04173EE51DD5DBB300F22E67 /* MachtSpassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04173EF01DD5DBB400F22E67 /* HackaTUMUITests.swift in Sources */,
+				04173EF01DD5DBB400F22E67 /* MachtSpassUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,12 +466,12 @@
 /* Begin PBXTargetDependency section */
 		04173EE21DD5DBB300F22E67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 04173ECB1DD5DBB300F22E67 /* HackaTUM */;
+			target = 04173ECB1DD5DBB300F22E67 /* MachtSpass */;
 			targetProxy = 04173EE11DD5DBB300F22E67 /* PBXContainerItemProxy */;
 		};
 		04173EED1DD5DBB400F22E67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 04173ECB1DD5DBB300F22E67 /* HackaTUM */;
+			target = 04173ECB1DD5DBB300F22E67 /* MachtSpass */;
 			targetProxy = 04173EEC1DD5DBB400F22E67 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -585,13 +585,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = HackaTUM/Info.plist;
+				INFOPLIST_FILE = MachtSpass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.MachtSpass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -601,13 +602,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = HackaTUM/Info.plist;
+				INFOPLIST_FILE = MachtSpass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.MachtSpass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -618,12 +620,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = HackaTUMTests/Info.plist;
+				INFOPLIST_FILE = MachtSpassTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUMTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.MachtSpassTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackaTUM.app/HackaTUM";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MachtSpass.app/MachtSpass";
 			};
 			name = Debug;
 		};
@@ -632,12 +634,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = HackaTUMTests/Info.plist;
+				INFOPLIST_FILE = MachtSpassTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUMTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.MachtSpassTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackaTUM.app/HackaTUM";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MachtSpass.app/MachtSpass";
 			};
 			name = Release;
 		};
@@ -645,12 +647,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = HackaTUMUITests/Info.plist;
+				INFOPLIST_FILE = MachtSpassUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUMUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.MachtSpassUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = HackaTUM;
+				TEST_TARGET_NAME = MachtSpass;
 			};
 			name = Debug;
 		};
@@ -658,19 +660,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = HackaTUMUITests/Info.plist;
+				INFOPLIST_FILE = MachtSpassUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUMUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.MachtSpassUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = HackaTUM;
+				TEST_TARGET_NAME = MachtSpass;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04173EC71DD5DBB300F22E67 /* Build configuration list for PBXProject "HackaTUM" */ = {
+		04173EC71DD5DBB300F22E67 /* Build configuration list for PBXProject "MachtSpass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04173EF21DD5DBB400F22E67 /* Debug */,
@@ -679,7 +681,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04173EF41DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUM" */ = {
+		04173EF41DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "MachtSpass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04173EF51DD5DBB400F22E67 /* Debug */,
@@ -688,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04173EF71DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUMTests" */ = {
+		04173EF71DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "MachtSpassTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04173EF81DD5DBB400F22E67 /* Debug */,
@@ -697,7 +699,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04173EFA1DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUMUITests" */ = {
+		04173EFA1DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "MachtSpassUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04173EFB1DD5DBB400F22E67 /* Debug */,

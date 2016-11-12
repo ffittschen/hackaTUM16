@@ -1,6 +1,6 @@
 //
 //  QRScannerTabViewController.swift
-//  HackaTUM
+//  MachtSpass
 //
 //  Created by Peter Christian Glade on 12.11.16.
 //  Copyright © 2016 BaconLove. All rights reserved.
@@ -28,7 +28,7 @@ class QRScannerTabViewController: UIViewController {
         
         disposeBag = DisposeBag()
         
-        super.init(nibName: R.nib.firstTabViewController.name, bundle: nil)
+        super.init(nibName: R.nib.homeTabViewController.name, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,7 +38,7 @@ class QRScannerTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.stringValue
+        viewModel.qrContentValue
             .bindTo(testLabel.rx.text)
             .addDisposableTo(disposeBag)
         

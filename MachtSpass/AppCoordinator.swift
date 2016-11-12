@@ -1,6 +1,6 @@
 //
 //  AppCoordinator.swift
-//  HackaTUM
+//  MachtSpass
 //
 //  Created by Florian Fittschen on 11/11/2016.
 //  Copyright © 2016 BaconLove. All rights reserved.
@@ -17,7 +17,7 @@ protocol Coordinator {
 class AppCoordinator: NSObject, Coordinator {
     
     fileprivate let disposeBag: DisposeBag
-    fileprivate let firstTabCoordinator: FirstTabCoordinator
+    fileprivate let homeTabCoordinator: HomeTabCoordinator
     fileprivate let scannerTabCoordinator: QRScannerTabViewCoordinator
     private var tabBarController: UITabBarController
     private var tabs: [TabCoordinator]

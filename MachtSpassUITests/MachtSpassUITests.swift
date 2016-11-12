@@ -1,6 +1,6 @@
 //
-//  HackaTUMUITests.swift
-//  HackaTUMUITests
+//  MachtSpassUITests.swift
+//  MachtSpassUITests
 //
 //  Created by Florian Fittschen on 11/11/2016.
 //  Copyright © 2016 BaconLove. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class HackaTUMUITests: XCTestCase {
+class MachtSpassUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
