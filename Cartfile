@@ -16,8 +16,5 @@ github "hyperoslo/Hue" ~> 2.0
 # Azure mobile SDK
 github "Azure/azure-mobile-apps-ios-client"
 
-# Fun Level Meter
-github "mpiccinato/GaugeView" ~> 0.1
-
 # JSON Parser 
 github "bignerdranch/Freddy" ~> 3.0
