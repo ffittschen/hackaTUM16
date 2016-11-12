@@ -1,0 +1,683 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04173ED01DD5DBB300F22E67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */; };
+		04173ED21DD5DBB300F22E67 /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173ED11DD5DBB300F22E67 /* FirstTabViewController.swift */; };
+		04173ED71DD5DBB300F22E67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04173ED61DD5DBB300F22E67 /* Assets.xcassets */; };
+		04173EDA1DD5DBB300F22E67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04173ED81DD5DBB300F22E67 /* LaunchScreen.storyboard */; };
+		04173EE51DD5DBB300F22E67 /* HackaTUMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173EE41DD5DBB300F22E67 /* HackaTUMTests.swift */; };
+		04173EF01DD5DBB400F22E67 /* HackaTUMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173EEF1DD5DBB400F22E67 /* HackaTUMUITests.swift */; };
+		04173EFF1DD5DC4800F22E67 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173EFE1DD5DC4800F22E67 /* AppCoordinator.swift */; };
+		04173F1E1DD5E58600F22E67 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F151DD5E58600F22E67 /* Alamofire.framework */; };
+		04173F1F1DD5E58600F22E67 /* CleanroomASL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F161DD5E58600F22E67 /* CleanroomASL.framework */; };
+		04173F201DD5E58600F22E67 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F171DD5E58600F22E67 /* CleanroomLogger.framework */; };
+		04173F211DD5E58600F22E67 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F181DD5E58600F22E67 /* Moya.framework */; };
+		04173F221DD5E58600F22E67 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F191DD5E58600F22E67 /* Result.framework */; };
+		04173F231DD5E58600F22E67 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F1A1DD5E58600F22E67 /* Rswift.framework */; };
+		04173F241DD5E58600F22E67 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F1B1DD5E58600F22E67 /* RxCocoa.framework */; };
+		04173F251DD5E58600F22E67 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F1C1DD5E58600F22E67 /* RxMoya.framework */; };
+		04173F261DD5E58600F22E67 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04173F1D1DD5E58600F22E67 /* RxSwift.framework */; };
+		04173F281DD5E59A00F22E67 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F271DD5E59A00F22E67 /* R.generated.swift */; };
+		04173F2A1DD5E5BC00F22E67 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F291DD5E5BC00F22E67 /* TabCoordinator.swift */; };
+		04173F2C1DD5E5D200F22E67 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F2B1DD5E5D200F22E67 /* Backend.swift */; };
+		04173F2F1DD5E6A400F22E67 /* FirstTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F2E1DD5E6A400F22E67 /* FirstTabCoordinator.swift */; };
+		04173F311DD5E72E00F22E67 /* FirstTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04173F301DD5E72E00F22E67 /* FirstTabViewModel.swift */; };
+		04173F351DD5E86D00F22E67 /* FirstTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04173F331DD5E86D00F22E67 /* FirstTabViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04173EE11DD5DBB300F22E67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04173EC41DD5DBB300F22E67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04173ECB1DD5DBB300F22E67;
+			remoteInfo = HackaTUM;
+		};
+		04173EEC1DD5DBB400F22E67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04173EC41DD5DBB300F22E67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04173ECB1DD5DBB300F22E67;
+			remoteInfo = HackaTUM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04173ECC1DD5DBB300F22E67 /* HackaTUM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackaTUM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04173ED11DD5DBB300F22E67 /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
+		04173ED61DD5DBB300F22E67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04173ED91DD5DBB300F22E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04173EDB1DD5DBB300F22E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04173EE01DD5DBB300F22E67 /* HackaTUMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackaTUMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04173EE41DD5DBB300F22E67 /* HackaTUMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackaTUMTests.swift; sourceTree = "<group>"; };
+		04173EE61DD5DBB300F22E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04173EEB1DD5DBB400F22E67 /* HackaTUMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackaTUMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04173EEF1DD5DBB400F22E67 /* HackaTUMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackaTUMUITests.swift; sourceTree = "<group>"; };
+		04173EF11DD5DBB400F22E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04173EFE1DD5DC4800F22E67 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		04173F011DD5E00400F22E67 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		04173F021DD5E00400F22E67 /* CleanroomASL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomASL.framework; path = ../Carthage/Build/iOS/CleanroomASL.framework; sourceTree = "<group>"; };
+		04173F031DD5E00400F22E67 /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = ../Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
+		04173F041DD5E00400F22E67 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = ../Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		04173F051DD5E00400F22E67 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		04173F061DD5E00400F22E67 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		04173F071DD5E00400F22E67 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = ../Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		04173F081DD5E00400F22E67 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		04173F121DD5E3CF00F22E67 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = ../Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		04173F151DD5E58600F22E67 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		04173F161DD5E58600F22E67 /* CleanroomASL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomASL.framework; path = Carthage/Build/iOS/CleanroomASL.framework; sourceTree = "<group>"; };
+		04173F171DD5E58600F22E67 /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
+		04173F181DD5E58600F22E67 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		04173F191DD5E58600F22E67 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		04173F1A1DD5E58600F22E67 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		04173F1B1DD5E58600F22E67 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		04173F1C1DD5E58600F22E67 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		04173F1D1DD5E58600F22E67 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		04173F271DD5E59A00F22E67 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		04173F291DD5E5BC00F22E67 /* TabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		04173F2B1DD5E5D200F22E67 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		04173F2E1DD5E6A400F22E67 /* FirstTabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTabCoordinator.swift; sourceTree = "<group>"; };
+		04173F301DD5E72E00F22E67 /* FirstTabViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTabViewModel.swift; sourceTree = "<group>"; };
+		04173F331DD5E86D00F22E67 /* FirstTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTabViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04173EC91DD5DBB300F22E67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04173F1E1DD5E58600F22E67 /* Alamofire.framework in Frameworks */,
+				04173F1F1DD5E58600F22E67 /* CleanroomASL.framework in Frameworks */,
+				04173F201DD5E58600F22E67 /* CleanroomLogger.framework in Frameworks */,
+				04173F211DD5E58600F22E67 /* Moya.framework in Frameworks */,
+				04173F221DD5E58600F22E67 /* Result.framework in Frameworks */,
+				04173F231DD5E58600F22E67 /* Rswift.framework in Frameworks */,
+				04173F241DD5E58600F22E67 /* RxCocoa.framework in Frameworks */,
+				04173F251DD5E58600F22E67 /* RxMoya.framework in Frameworks */,
+				04173F261DD5E58600F22E67 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04173EDD1DD5DBB300F22E67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04173EE81DD5DBB400F22E67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04173EC31DD5DBB300F22E67 = {
+			isa = PBXGroup;
+			children = (
+				04173ECE1DD5DBB300F22E67 /* HackaTUM */,
+				04173EE31DD5DBB300F22E67 /* HackaTUMTests */,
+				04173EEE1DD5DBB400F22E67 /* HackaTUMUITests */,
+				04173ECD1DD5DBB300F22E67 /* Products */,
+				04173F001DD5E00400F22E67 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04173ECD1DD5DBB300F22E67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04173ECC1DD5DBB300F22E67 /* HackaTUM.app */,
+				04173EE01DD5DBB300F22E67 /* HackaTUMTests.xctest */,
+				04173EEB1DD5DBB400F22E67 /* HackaTUMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04173ECE1DD5DBB300F22E67 /* HackaTUM */ = {
+			isa = PBXGroup;
+			children = (
+				04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */,
+				04173EFE1DD5DC4800F22E67 /* AppCoordinator.swift */,
+				04173F291DD5E5BC00F22E67 /* TabCoordinator.swift */,
+				04173F2D1DD5E5D600F22E67 /* Network */,
+				04173EFD1DD5DC0A00F22E67 /* Features */,
+				04173ED61DD5DBB300F22E67 /* Assets.xcassets */,
+				04173ED81DD5DBB300F22E67 /* LaunchScreen.storyboard */,
+				04173EDB1DD5DBB300F22E67 /* Info.plist */,
+				04173F271DD5E59A00F22E67 /* R.generated.swift */,
+			);
+			path = HackaTUM;
+			sourceTree = "<group>";
+		};
+		04173EE31DD5DBB300F22E67 /* HackaTUMTests */ = {
+			isa = PBXGroup;
+			children = (
+				04173EE41DD5DBB300F22E67 /* HackaTUMTests.swift */,
+				04173EE61DD5DBB300F22E67 /* Info.plist */,
+			);
+			path = HackaTUMTests;
+			sourceTree = "<group>";
+		};
+		04173EEE1DD5DBB400F22E67 /* HackaTUMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04173EEF1DD5DBB400F22E67 /* HackaTUMUITests.swift */,
+				04173EF11DD5DBB400F22E67 /* Info.plist */,
+			);
+			path = HackaTUMUITests;
+			sourceTree = "<group>";
+		};
+		04173EFD1DD5DC0A00F22E67 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				04173F361DD5E90C00F22E67 /* FirstTab */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		04173F001DD5E00400F22E67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04173F151DD5E58600F22E67 /* Alamofire.framework */,
+				04173F161DD5E58600F22E67 /* CleanroomASL.framework */,
+				04173F171DD5E58600F22E67 /* CleanroomLogger.framework */,
+				04173F181DD5E58600F22E67 /* Moya.framework */,
+				04173F191DD5E58600F22E67 /* Result.framework */,
+				04173F1A1DD5E58600F22E67 /* Rswift.framework */,
+				04173F1B1DD5E58600F22E67 /* RxCocoa.framework */,
+				04173F1C1DD5E58600F22E67 /* RxMoya.framework */,
+				04173F1D1DD5E58600F22E67 /* RxSwift.framework */,
+				04173F121DD5E3CF00F22E67 /* Rswift.framework */,
+				04173F011DD5E00400F22E67 /* Alamofire.framework */,
+				04173F021DD5E00400F22E67 /* CleanroomASL.framework */,
+				04173F031DD5E00400F22E67 /* CleanroomLogger.framework */,
+				04173F041DD5E00400F22E67 /* Moya.framework */,
+				04173F051DD5E00400F22E67 /* Result.framework */,
+				04173F061DD5E00400F22E67 /* RxCocoa.framework */,
+				04173F071DD5E00400F22E67 /* RxMoya.framework */,
+				04173F081DD5E00400F22E67 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04173F2D1DD5E5D600F22E67 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				04173F2B1DD5E5D200F22E67 /* Backend.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		04173F361DD5E90C00F22E67 /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				04173ED11DD5DBB300F22E67 /* FirstTabViewController.swift */,
+				04173F331DD5E86D00F22E67 /* FirstTabViewController.xib */,
+				04173F2E1DD5E6A400F22E67 /* FirstTabCoordinator.swift */,
+				04173F301DD5E72E00F22E67 /* FirstTabViewModel.swift */,
+			);
+			name = FirstTab;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04173ECB1DD5DBB300F22E67 /* HackaTUM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04173EF41DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUM" */;
+			buildPhases = (
+				04173F141DD5E42300F22E67 /* R.swift */,
+				04173EC81DD5DBB300F22E67 /* Sources */,
+				04173EC91DD5DBB300F22E67 /* Frameworks */,
+				04173ECA1DD5DBB300F22E67 /* Resources */,
+				04173F111DD5E31600F22E67 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackaTUM;
+			productName = HackaTUM;
+			productReference = 04173ECC1DD5DBB300F22E67 /* HackaTUM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04173EDF1DD5DBB300F22E67 /* HackaTUMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04173EF71DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUMTests" */;
+			buildPhases = (
+				04173EDC1DD5DBB300F22E67 /* Sources */,
+				04173EDD1DD5DBB300F22E67 /* Frameworks */,
+				04173EDE1DD5DBB300F22E67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04173EE21DD5DBB300F22E67 /* PBXTargetDependency */,
+			);
+			name = HackaTUMTests;
+			productName = HackaTUMTests;
+			productReference = 04173EE01DD5DBB300F22E67 /* HackaTUMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04173EEA1DD5DBB400F22E67 /* HackaTUMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04173EFA1DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUMUITests" */;
+			buildPhases = (
+				04173EE71DD5DBB400F22E67 /* Sources */,
+				04173EE81DD5DBB400F22E67 /* Frameworks */,
+				04173EE91DD5DBB400F22E67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04173EED1DD5DBB400F22E67 /* PBXTargetDependency */,
+			);
+			name = HackaTUMUITests;
+			productName = HackaTUMUITests;
+			productReference = 04173EEB1DD5DBB400F22E67 /* HackaTUMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04173EC41DD5DBB300F22E67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = BaconLove;
+				TargetAttributes = {
+					04173ECB1DD5DBB300F22E67 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					04173EDF1DD5DBB300F22E67 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 04173ECB1DD5DBB300F22E67;
+					};
+					04173EEA1DD5DBB400F22E67 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 04173ECB1DD5DBB300F22E67;
+					};
+				};
+			};
+			buildConfigurationList = 04173EC71DD5DBB300F22E67 /* Build configuration list for PBXProject "HackaTUM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04173EC31DD5DBB300F22E67;
+			productRefGroup = 04173ECD1DD5DBB300F22E67 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04173ECB1DD5DBB300F22E67 /* HackaTUM */,
+				04173EDF1DD5DBB300F22E67 /* HackaTUMTests */,
+				04173EEA1DD5DBB400F22E67 /* HackaTUMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04173ECA1DD5DBB300F22E67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04173EDA1DD5DBB300F22E67 /* LaunchScreen.storyboard in Resources */,
+				04173F351DD5E86D00F22E67 /* FirstTabViewController.xib in Resources */,
+				04173ED71DD5DBB300F22E67 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04173EDE1DD5DBB300F22E67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04173EE91DD5DBB400F22E67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04173F111DD5E31600F22E67 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CleanroomASL.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CleanroomLogger.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		04173F141DD5E42300F22E67 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/rswift\" \"$SRCROOT\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04173EC81DD5DBB300F22E67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04173F2A1DD5E5BC00F22E67 /* TabCoordinator.swift in Sources */,
+				04173EFF1DD5DC4800F22E67 /* AppCoordinator.swift in Sources */,
+				04173F2F1DD5E6A400F22E67 /* FirstTabCoordinator.swift in Sources */,
+				04173F2C1DD5E5D200F22E67 /* Backend.swift in Sources */,
+				04173ED21DD5DBB300F22E67 /* FirstTabViewController.swift in Sources */,
+				04173F311DD5E72E00F22E67 /* FirstTabViewModel.swift in Sources */,
+				04173ED01DD5DBB300F22E67 /* AppDelegate.swift in Sources */,
+				04173F281DD5E59A00F22E67 /* R.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04173EDC1DD5DBB300F22E67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04173EE51DD5DBB300F22E67 /* HackaTUMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04173EE71DD5DBB400F22E67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04173EF01DD5DBB400F22E67 /* HackaTUMUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04173EE21DD5DBB300F22E67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04173ECB1DD5DBB300F22E67 /* HackaTUM */;
+			targetProxy = 04173EE11DD5DBB300F22E67 /* PBXContainerItemProxy */;
+		};
+		04173EED1DD5DBB400F22E67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04173ECB1DD5DBB300F22E67 /* HackaTUM */;
+			targetProxy = 04173EEC1DD5DBB400F22E67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04173ED81DD5DBB300F22E67 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04173ED91DD5DBB300F22E67 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04173EF21DD5DBB400F22E67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04173EF31DD5DBB400F22E67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04173EF51DD5DBB400F22E67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = HackaTUM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04173EF61DD5DBB400F22E67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = HackaTUM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		04173EF81DD5DBB400F22E67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HackaTUMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackaTUM.app/HackaTUM";
+			};
+			name = Debug;
+		};
+		04173EF91DD5DBB400F22E67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HackaTUMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackaTUM.app/HackaTUM";
+			};
+			name = Release;
+		};
+		04173EFB1DD5DBB400F22E67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = HackaTUMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HackaTUM;
+			};
+			name = Debug;
+		};
+		04173EFC1DD5DBB400F22E67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = HackaTUMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HackaTUM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04173EC71DD5DBB300F22E67 /* Build configuration list for PBXProject "HackaTUM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04173EF21DD5DBB400F22E67 /* Debug */,
+				04173EF31DD5DBB400F22E67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04173EF41DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04173EF51DD5DBB400F22E67 /* Debug */,
+				04173EF61DD5DBB400F22E67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04173EF71DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04173EF81DD5DBB400F22E67 /* Debug */,
+				04173EF91DD5DBB400F22E67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04173EFA1DD5DBB400F22E67 /* Build configuration list for PBXNativeTarget "HackaTUMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04173EFB1DD5DBB400F22E67 /* Debug */,
+				04173EFC1DD5DBB400F22E67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04173EC41DD5DBB300F22E67 /* Project object */;
+}

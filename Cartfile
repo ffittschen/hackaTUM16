@@ -1,0 +1,8 @@
+# Networking + RxSwift
+github "Moya/Moya" "8.0.0-beta.4"
+
+# Logging
+github "emaloney/CleanroomLogger" ~> 3.0
+
+# Resources
+github "mac-cain13/R.swift.Library" ~> 3.0
