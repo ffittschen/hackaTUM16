@@ -59,6 +59,7 @@ Carthage/Checkouts
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
 
+Appfile
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
@@ -66,3 +67,11 @@ fastlane/test_output
 
 # R.swift generated file should not be checked in
 *.generated.swift
+
+# Custom
+*.cer
+*.p12
+*.pkey
+*.pem
+*.certSigningRequest
+*.mobileProvision
