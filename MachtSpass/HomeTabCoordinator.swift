@@ -18,11 +18,11 @@ class HomeTabCoordinator: NSObject, TabCoordinator {
     fileprivate let viewController: HomeTabViewController
     
     override init() {
-        tabBarItem = UITabBarItem(title: "Home", image: nil, selectedImage: nil)
-        tabBarItem.image = #imageLiteral(resourceName: "HomeTabIcon")
+        tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "HomeTabIcon"), selectedImage: nil)
         
         viewModel = HomeTabViewModel(funBucks: 42)
         viewController = HomeTabViewController(viewModel: viewModel)
+        
         navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem = tabBarItem
         navigationController.navigationBar.barTintColor = .white

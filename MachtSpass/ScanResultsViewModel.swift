@@ -8,54 +8,25 @@
 
 import Foundation
 import RxSwift
-import QRCodeReader
-import AVFoundation
-import UserNotifications
 
-class ScanResultsViewModel: NSObject {
+struct ScanResultsViewModel {
     fileprivate let disposeBag: DisposeBag
+    let qrContent: Variable<String?>
+    let productID: Observable<Int>
     
-    let productID: String
-    
-    init(productID: String) {
-        self.productID = productID
+    init() {
         disposeBag = DisposeBag()
+        
+        qrContent = Variable<String?>(nil)
+        productID = qrContent.asObservable()
+            .map({ qrContent -> Int? in
+                guard let qrContent = qrContent,
+                    let productID = Int(qrContent) else {
+                        return nil
+                }
+                
+                return productID
+            })
+            .ignoreNil()
     }
-}
-
-extension ScanResultsViewModel: ScanResultsViewControllerDelegate {
-    func didTouchMakesFunButton() {
-        //  Request server to send notifications to the right users 
-        
-        //  ... 
-        
-        
-        
-        
-        
-        //  Testing Notifications
-
-    }
-}
-
-//  Data source for detail table
-extension ScanResultsViewModel: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "DUMMY")
-        cell.textLabel?.text = "DUMMY_CELL"
-        return cell
-    }
-}
-
-extension ScanResultsViewModel: UITableViewDelegate {
-    
 }

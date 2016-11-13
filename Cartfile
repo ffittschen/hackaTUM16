@@ -8,7 +8,7 @@ github "emaloney/CleanroomLogger" ~> 3.0
 github "mac-cain13/R.swift.Library" ~> 3.0
 
 # QR-Code Scanner
-github "yannickl/QRCodeReader.swift" >= 7.2.0
+github "hyperoslo/BarcodeScanner"
 
 # Initialize UIColor with hex values
 github "hyperoslo/Hue" ~> 2.0

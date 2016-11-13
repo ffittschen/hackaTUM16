@@ -9,10 +9,10 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import AVFoundation
-import QRCodeReader
+import CleanroomLogger
 
-protocol ScanResultsViewControllerDelegate {
+protocol ScanResultsViewControllerDelegate: class {
+    func didPressScanQRCodeButton()
     func didTouchMakesFunButton()
 }
 
@@ -21,7 +21,7 @@ class ScanResultsViewController: UIViewController {
     fileprivate let disposeBag: DisposeBag
     fileprivate let viewModel: ScanResultsViewModel
     
-    var delegate: ScanResultsViewControllerDelegate!
+    weak var delegate: ScanResultsViewControllerDelegate?
     
     @IBOutlet var productImageView: UIImageView!
     @IBOutlet var productNameLabel: UILabel!
@@ -31,11 +31,20 @@ class ScanResultsViewController: UIViewController {
     
     init(viewModel: ScanResultsViewModel) {
         self.viewModel = viewModel
-        self.delegate = viewModel
         
         disposeBag = DisposeBag()
         
         super.init(nibName: R.nib.scanResultsViewController.name, bundle: nil)
+        
+        let rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ScanTabIcon"), style: .plain, target: self, action: nil)
+        navigationController?.navigationItem.rightBarButtonItem = rightBarButtonItem
+        
+        rightBarButtonItem.rx.tap
+            .subscribe(onNext: { [weak self] () in
+                self?.delegate?.didPressScanQRCodeButton()
+            })
+            .addDisposableTo(disposeBag)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -44,12 +53,37 @@ class ScanResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        productDetailsTableView.dataSource = self.viewModel
-        productDetailsTableView.delegate = self.viewModel
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        productDetailsTableView.dataSource = self
+        productDetailsTableView.delegate = self
+        
+        viewModel.productID.asObservable()
+            .subscribe(onNext: { productID in
+                Log.debug?.message("TODO: fetch data for ID and init product")
+            })
+            .addDisposableTo(disposeBag)
     }
 }
+
+//  Data source for detail table
+extension ScanResultsViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "DUMMY")
+        cell.textLabel?.text = "DUMMY_CELL"
+        return cell
+    }
+}
+
+extension ScanResultsViewController: UITableViewDelegate {
+    
+}
+
