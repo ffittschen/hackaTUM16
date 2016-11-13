@@ -21,7 +21,7 @@ enum BackendService {
 }
 
 extension BackendService: TargetType {
-    var baseURL: URL { return URL(string: "http://machtspass-server.azurewebsites.net/api/v1")! }
+    var baseURL: URL { return URL(string: "https://machtspass-server.azurewebsites.net/api/v1")! }
     
     var path: String {
         switch self {

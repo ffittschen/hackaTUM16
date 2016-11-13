@@ -35,23 +35,31 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-NV-RaM">
-                    <rect key="frame" x="98" y="60" width="179" height="354.5"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-NV-RaM">
+                    <rect key="frame" x="50" y="60" width="275" height="363"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spaßbucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpF-fc-k0r">
-                            <rect key="frame" x="0.0" y="0.0" width="179" height="50.5"/>
+                            <rect key="frame" x="48" y="0.0" width="179" height="51"/>
                             <fontDescription key="fontDescription" name="MMTextProWebTT-Bold" family="MM Text Pro WebTT" pointSize="42"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAf-mR-QF0">
-                            <rect key="frame" x="21" y="58.5" width="137" height="173"/>
-                            <fontDescription key="fontDescription" name="MMHeadlineProWebTT-Regular" family="MM Headline Pro WebTT" pointSize="144"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="IO2-l4-DHk">
+                            <rect key="frame" x="0.0" y="61" width="275" height="173"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAf-mR-QF0">
+                                    <rect key="frame" x="0.0" y="0.0" width="137" height="173"/>
+                                    <fontDescription key="fontDescription" name="MMHeadlineProWebTT-Regular" family="MM Headline Pro WebTT" pointSize="144"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpassBuck" translatesAutoresizingMaskIntoConstraints="NO" id="udd-1I-3Jd">
+                                    <rect key="frame" x="167" y="33" width="108" height="108"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJB-17-fOh">
-                            <rect key="frame" x="9.5" y="239.5" width="160" height="33"/>
+                            <rect key="frame" x="58" y="244" width="160" height="33"/>
                             <color key="backgroundColor" red="0.88465023040771484" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="160" id="uUt-cZ-vER"/>
@@ -62,7 +70,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiT-d8-yQV">
-                            <rect key="frame" x="9.5" y="280.5" width="160" height="33"/>
+                            <rect key="frame" x="58" y="287" width="160" height="33"/>
                             <color key="backgroundColor" red="0.88465023040771484" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="160" id="t1W-C3-Twf"/>
@@ -73,7 +81,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWN-KK-feg">
-                            <rect key="frame" x="9.5" y="321.5" width="160" height="33"/>
+                            <rect key="frame" x="58" y="330" width="160" height="33"/>
                             <color key="backgroundColor" red="0.88465023040771484" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="160" id="RSf-mZ-sHW"/>
@@ -96,4 +104,7 @@
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="SpassBuck" width="108" height="108"/>
+    </resources>
 </document>

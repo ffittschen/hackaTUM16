@@ -16,7 +16,7 @@
                 <outlet property="productDetailLabel" destination="Mwv-Fi-Eh0" id="y2k-dH-B4K"/>
                 <outlet property="productDetailsTableView" destination="JB7-df-auC" id="6eN-Tu-QjC"/>
                 <outlet property="productImageView" destination="p2p-Yk-uzc" id="kTJ-Y2-PDw"/>
-                <outlet property="productNameLabel" destination="KXX-TI-YRG" id="von-eK-hBQ"/>
+                <outlet property="productNameLabel" destination="KXX-TI-YRG" id="CwJ-nZ-4TJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -10,6 +10,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 import CleanroomLogger
+import RxMoya
+import Freddy
 
 protocol ScanResultsViewControllerDelegate: class {
     func didPressScanQRCodeButton()
@@ -45,6 +47,56 @@ class ScanResultsViewController: UIViewController {
                 self?.delegate?.didPressScanQRCodeButton()
             })
             .addDisposableTo(disposeBag)
+    }
+    
+    func linkViewModel () {
+        viewModel.productID.asObservable()
+            .subscribe(onNext: { productID in
+                RxMoyaProvider<BackendService>().request(.product(productID), completion: { (response) in
+                    guard let val = response.value else { return }
+                    print("RES: \(val)")
+                    let json = try! JSON(data: val.data)
+                    
+                    self.viewModel.productName.value = try! json.getString(at: "product", "title")
+                    self.viewModel.productDescription.value = try! json.getString(at: "product", "content")
+                    self.viewModel.productLikes.value = try! json.getInt(at: "product", "rating", "likes")
+                    self.viewModel.productDislikes.value = try! json.getInt(at: "product", "rating", "dislikes")
+                    self.viewModel.productFunLevel.value = try! json.getInt(at: "product", "rating", "funlevel")
+                })
+            })
+            .addDisposableTo(disposeBag)
+        
+        viewModel
+            .productNameValue
+            .bindTo(UILabel(frame: .zero).rx.text)
+            .addDisposableTo(disposeBag)
+        
+        viewModel
+            .productDescriptionValue
+            .bindTo(productDetailLabel.rx.text)
+            .addDisposableTo(disposeBag)
+        
+        viewModel
+            .productFunLevelValue
+            .subscribe(onNext: { (funLevel) in
+                self.funLevelMeter.progress = Double(funLevel)
+            }).addDisposableTo(disposeBag)
+        
+        viewModel
+            .productNameValue
+            .bindTo(productNameLabel.rx.text)
+            .addDisposableTo(disposeBag)
+        
+        viewModel
+            .productNameValue
+            .bindTo(productNameLabel.rx.text)
+            .addDisposableTo(disposeBag)
+        
+        viewModel
+            .productNameValue
+            .bindTo(productNameLabel.rx.text)
+            .addDisposableTo(disposeBag)
+        
         
     }
     
@@ -57,12 +109,7 @@ class ScanResultsViewController: UIViewController {
         
         productDetailsTableView.dataSource = self
         productDetailsTableView.delegate = self
-        
-        viewModel.productID.asObservable()
-            .subscribe(onNext: { productID in
-                Log.debug?.message("TODO: fetch data for ID and init product")
-            })
-            .addDisposableTo(disposeBag)
+        linkViewModel()
     }
 }
 
