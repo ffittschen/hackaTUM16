@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import RxMoya
+import Moya
 
 class HomeTabCoordinator: NSObject, TabCoordinator {
     
@@ -16,6 +18,7 @@ class HomeTabCoordinator: NSObject, TabCoordinator {
     var viewModel: HomeTabViewModel
     
     fileprivate let viewController: HomeTabViewController
+    fileprivate let backendProvider: RxMoyaProvider<BackendService>
     
     override init() {
         tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "HomeTabIcon"), selectedImage: nil)
@@ -34,10 +37,12 @@ class HomeTabCoordinator: NSObject, TabCoordinator {
         titleImageView.contentMode = .scaleAspectFit
         viewController.navigationItem.titleView = titleImageView
         
+        backendProvider = RxMoyaProvider<BackendService>()
+        
         super.init()
     }
     
     func start() {
-        
+        //backendProvider.request()
     }
 }

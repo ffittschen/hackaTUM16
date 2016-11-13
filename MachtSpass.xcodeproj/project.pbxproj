@@ -109,6 +109,10 @@
 		04D2CE611DD7D35C00F009A0 /* AirPods.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AirPods.jpg; sourceTree = "<group>"; };
 		04D2CE631DD7E0C100F009A0 /* BarcodeScanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BarcodeScanner.framework; path = Carthage/Build/iOS/BarcodeScanner.framework; sourceTree = "<group>"; };
 		04D2CE651DD7EC2A00F009A0 /* Observable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
+		04D2CE671DD80B6C00F009A0 /* MMHeadlineProWebTT-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MMHeadlineProWebTT-Regular.ttf"; sourceTree = "<group>"; };
+		04D2CE681DD80B6C00F009A0 /* MMTextProWebTT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MMTextProWebTT-Bold.ttf"; sourceTree = "<group>"; };
+		04D2CE691DD80B6C00F009A0 /* MMTextProWebTT-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MMTextProWebTT-Regular.ttf"; sourceTree = "<group>"; };
+		04D2CE6A1DD80B6C00F009A0 /* MMTextProWebTT-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MMTextProWebTT-Semibold.ttf"; sourceTree = "<group>"; };
 		C4257DDC1DD812FC00941D73 /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = "<group>"; };
 		C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerTabViewCoordinator.swift; sourceTree = "<group>"; };
 		C49D548D1DD7657000FCEE74 /* GaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
@@ -288,6 +292,10 @@
 		C4B4CF9D1DD75468006CA897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04D2CE671DD80B6C00F009A0 /* MMHeadlineProWebTT-Regular.ttf */,
+				04D2CE681DD80B6C00F009A0 /* MMTextProWebTT-Bold.ttf */,
+				04D2CE691DD80B6C00F009A0 /* MMTextProWebTT-Regular.ttf */,
+				04D2CE6A1DD80B6C00F009A0 /* MMTextProWebTT-Semibold.ttf */,
 				04737E511DD77B9B003C89F7 /* MachtSpass.entitlements */,
 				04D2CE611DD7D35C00F009A0 /* AirPods.jpg */,
 				C49D548D1DD7657000FCEE74 /* GaugeView.swift */,
@@ -669,7 +677,7 @@
 				);
 				INFOPLIST_FILE = MachtSpass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "com.fittschen.machtSpass Development";
@@ -693,7 +701,7 @@
 				);
 				INFOPLIST_FILE = MachtSpass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "com.fittschen.machtSpass AppStore";
