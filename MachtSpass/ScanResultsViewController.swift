@@ -26,10 +26,12 @@ class ScanResultsViewController: UIViewController {
     weak var delegate: ScanResultsViewControllerDelegate?
     
     @IBOutlet weak var machtSpassButton: UIButton!
-    @IBOutlet var productImageView: UIImageView!
-    @IBOutlet var productNameLabel: UILabel!
-    @IBOutlet var productDetailLabel: UILabel!
-    @IBOutlet var funLevelMeter: GaugeView!
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productDetailLabel: UILabel!
+    @IBOutlet weak var funLevelMeter: GaugeView!
+    @IBOutlet weak var dislikeLabel: UILabel!
+    @IBOutlet weak var likeLabel: UILabel!
     
     init(viewModel: ScanResultsViewModel) {
         self.viewModel = viewModel
@@ -72,9 +74,25 @@ class ScanResultsViewController: UIViewController {
                 self.funLevelMeter.progress = Double(funLevel/100)
             }).addDisposableTo(disposeBag)
         
+        viewModel
+            .productDislikesValue
+            .map { dislikes -> String? in
+                return "\(dislikes)"
+            }
+            .bindTo(dislikeLabel.rx.text)
+            .addDisposableTo(disposeBag)
+        
+        viewModel
+            .productLikesValue
+            .map { likes -> String? in
+                return likes.description
+            }
+            .bindTo(likeLabel.rx.text)
+            .addDisposableTo(disposeBag)
+        
         machtSpassButton.rx.tap
             .subscribe(onNext: { [weak self] () in
-                self?.delegate?.didPressScanQRCodeButton()
+                self?.delegate?.didPressMachtSpassButton()
             })
             .addDisposableTo(disposeBag)
         

@@ -14,9 +14,9 @@ class AzureClient {
     // One-line Singleton
     static let shared = AzureClient()
     
-    private(set) var client: MSClient
+//    private(set) var client: MSClient
     
     private init () {
-        client = MSClient(applicationURLString:"https://push-mobile-app.azurewebsites.net")
+//        client = MSClient(applicationURLString:"https://push-mobile-app.azurewebsites.net")
     }
 }

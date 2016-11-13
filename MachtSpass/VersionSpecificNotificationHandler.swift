@@ -66,13 +66,15 @@ extension VersionSpecificNotificationHandler {
         
         UserDefaults.standard.setValue(pushTokenString, forKey: "PushDeviceToken")
         
-        AzureClient.shared.client.push?.registerDeviceToken(deviceToken) { error in
-            if let error = error {
-                Log.error?.message("Error registering for push notifications with error: \(error)")
-            } else {
-                Log.debug?.message("Registered for push notifications with token: \(pushTokenString)")
-            }
-        }
+        Log.debug?.message("Registered for push notifications with token: \(pushTokenString)")
+        
+//        AzureClient.shared.client.push?.registerDeviceToken(deviceToken) { error in
+//            if let error = error {
+//                Log.error?.message("Error registering for push notifications with error: \(error)")
+//            } else {
+//                Log.debug?.message("Registered for push notifications with token: \(pushTokenString)")
+//            }
+//        }
     }
     
     func failedToRegisterForNotifications(error: Error) {

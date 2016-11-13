@@ -67,7 +67,9 @@ extension BackendService: TargetType {
         case .postQuestion(let userID, let productID):
             return [
                 "userid": userID,
-                "productid": productID
+                "productid": productID,
+                "latitude": "",
+                "longitude": ""
             ]
         default:
             return nil

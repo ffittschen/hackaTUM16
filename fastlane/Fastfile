@@ -22,7 +22,9 @@ platform :ios do
 
   desc "Generates a push certificate"
   lane :push do
-    pem
+    pem(
+      p12_password: "***REMOVED***"
+    )
   end
 
   desc "Requests a provisioning profile and builds the app"

@@ -96,6 +96,12 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
                     switch result {
                     case .success(let response):
                         let json = try! JSON(data: response.data)
+                        
+                        let userID = try! json.getString(at: "userid")
+                        if UserDefaults.standard.string(forKey: "userID") == nil {
+                            UserDefaults.standard.set(userID, forKey: "userID")
+                        }
+                        
                         self.scanResultsViewModel.productName.value = try! json.getString(at: "product", "title")
                         let imageURL = URL(string: try! json.getString(at: "product", "image"))
                         let task = URLSession.shared.dataTask(with: imageURL!) { data, response, error in
@@ -152,12 +158,14 @@ extension QRScannerTabViewCoordinator: ScanResultsViewControllerDelegate {
         let userID = UserDefaults.standard.string(forKey: "userID") ?? ""
         
         scanResultsViewModel.productID
-            .takeLast(1)
-            .subscribe(onNext: { [weak self] productID in
-                self?.backendProvider.request(.postQuestion(userID: userID, productID: productID)) { result in
+            .subscribe(onNext: { productID in
+                self.backendProvider.request(.postQuestion(userID: userID, productID: productID)) { result in
                     switch result {
                     case .success(let response):
-                        Log.debug?.message("Posted question. Response: \(response)")
+                        Log.debug?.message("Posted question. Response: \(response.debugDescription)")
+                        if let json = try? JSON(data: response.data) {
+                            Log.debug?.message("\(json.description)")
+                        }
                     case .failure(let error):
                         Log.error?.message("Error while pressing machtSpassButton: \(error)")
                     }
