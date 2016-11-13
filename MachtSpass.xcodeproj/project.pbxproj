@@ -108,6 +108,10 @@
 		04D2CE611DD7D35C00F009A0 /* AirPods.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AirPods.jpg; sourceTree = "<group>"; };
 		04D2CE631DD7E0C100F009A0 /* BarcodeScanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BarcodeScanner.framework; path = Carthage/Build/iOS/BarcodeScanner.framework; sourceTree = "<group>"; };
 		04D2CE651DD7EC2A00F009A0 /* Observable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
+		04D2CE671DD80B6C00F009A0 /* MMHeadlineProWebTT-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MMHeadlineProWebTT-Regular.ttf"; sourceTree = "<group>"; };
+		04D2CE681DD80B6C00F009A0 /* MMTextProWebTT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MMTextProWebTT-Bold.ttf"; sourceTree = "<group>"; };
+		04D2CE691DD80B6C00F009A0 /* MMTextProWebTT-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MMTextProWebTT-Regular.ttf"; sourceTree = "<group>"; };
+		04D2CE6A1DD80B6C00F009A0 /* MMTextProWebTT-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MMTextProWebTT-Semibold.ttf"; sourceTree = "<group>"; };
 		C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerTabViewCoordinator.swift; sourceTree = "<group>"; };
 		C49D548D1DD7657000FCEE74 /* GaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
 		C4B4CF9E1DD7548B006CA897 /* UIDevice+isSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+isSimulator.swift"; sourceTree = "<group>"; };
@@ -284,6 +288,10 @@
 		C4B4CF9D1DD75468006CA897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04D2CE671DD80B6C00F009A0 /* MMHeadlineProWebTT-Regular.ttf */,
+				04D2CE681DD80B6C00F009A0 /* MMTextProWebTT-Bold.ttf */,
+				04D2CE691DD80B6C00F009A0 /* MMTextProWebTT-Regular.ttf */,
+				04D2CE6A1DD80B6C00F009A0 /* MMTextProWebTT-Semibold.ttf */,
 				04737E511DD77B9B003C89F7 /* MachtSpass.entitlements */,
 				04D2CE611DD7D35C00F009A0 /* AirPods.jpg */,
 				C49D548D1DD7657000FCEE74 /* GaugeView.swift */,
