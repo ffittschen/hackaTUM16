@@ -67,7 +67,11 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
     
     //  entry point of the view 
     func start() {
-        showBarcodeScanner()
+        if UIDevice.isSimulator {
+            scanResultsViewModel.qrContent.value = "1234567"
+        } else {
+            showBarcodeScanner()
+        }
     }
 }
 

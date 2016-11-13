@@ -37,7 +37,8 @@ class ScanResultsViewController: UIViewController {
         super.init(nibName: R.nib.scanResultsViewController.name, bundle: nil)
         
         let rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ScanTabIcon"), style: .plain, target: self, action: nil)
-        navigationController?.navigationItem.rightBarButtonItem = rightBarButtonItem
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+        navigationController?.navigationBar.tintColor = UIColor(hex: "#df0000")
         
         rightBarButtonItem.rx.tap
             .subscribe(onNext: { [weak self] () in
