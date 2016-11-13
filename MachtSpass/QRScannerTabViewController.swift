@@ -38,12 +38,9 @@ class QRScannerTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //  just for dwbugging on the simulator which has no camera
+        //  just for debugging on the simulator which has no camera
         if UIDevice.isSimulator {
-            let _ = Timer.init(fire: Date().addingTimeInterval(500), interval: 0, repeats: false, block: { (timer) in
-                print("Set Test Code.")
-                self.viewModel.testPseudoQRCode()
-            })
+            self.viewModel.testPseudoQRCode()
         } else {
             
             //  Add and expand qrCodeScan View

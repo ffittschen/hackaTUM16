@@ -18,3 +18,6 @@ github "Azure/azure-mobile-apps-ios-client"
 
 # JSON Parser 
 github "bignerdranch/Freddy" ~> 3.0
+
+# Facebook Pop
+github "facebook/pop" ~> 1.0.7

@@ -36,13 +36,13 @@
                                 <rect key="frame" x="23" y="8" width="329" height="282"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-XF-BFp">
-                                        <rect key="frame" x="0.0" y="0.0" width="329" height="119"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="329" height="139"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2p-Yk-uzc">
-                                                <rect key="frame" x="0.0" y="0.0" width="98" height="119"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="139"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-fI-oZG">
-                                                <rect key="frame" x="113" y="0.0" width="216" height="119"/>
+                                                <rect key="frame" x="113" y="0.0" width="216" height="139"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="edi-bq-tyE">
                                                         <rect key="frame" x="0.0" y="0.0" width="216" height="22"/>
@@ -59,7 +59,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwv-Fi-Eh0">
-                                                        <rect key="frame" x="0.0" y="22" width="216" height="97"/>
+                                                        <rect key="frame" x="0.0" y="22" width="216" height="117"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -68,14 +68,6 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7t-ng-kAt">
-                                        <rect key="frame" x="0.0" y="139" width="329" height="0.0"/>
-                                        <color key="backgroundColor" red="0.87450980392156863" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <state key="normal" title="Macht das Teil Spass ?">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbh-wH-cu8">
                                         <rect key="frame" x="0.0" y="159" width="329" height="123"/>
                                         <subviews>
@@ -104,6 +96,15 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7t-ng-kAt">
+                                <rect key="frame" x="23" y="149" width="329" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87450980392156863" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Macht das Teil Spass ?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
