@@ -1,4 +1,4 @@
-//
+    //
 //  ScanResultsViewController.swift
 //  HackaTUM
 //
@@ -15,7 +15,7 @@ import Freddy
 
 protocol ScanResultsViewControllerDelegate: class {
     func didPressScanQRCodeButton()
-    func didTouchMakesFunButton()
+    func didPressMachtSpassButton()
 }
 
 class ScanResultsViewController: UIViewController {
@@ -25,11 +25,11 @@ class ScanResultsViewController: UIViewController {
     
     weak var delegate: ScanResultsViewControllerDelegate?
     
+    @IBOutlet weak var machtSpassButton: UIButton!
     @IBOutlet var productImageView: UIImageView!
     @IBOutlet var productNameLabel: UILabel!
     @IBOutlet var productDetailLabel: UILabel!
     @IBOutlet var funLevelMeter: GaugeView!
-    @IBOutlet var productDetailsTableView: UITableView!
     
     init(viewModel: ScanResultsViewModel) {
         self.viewModel = viewModel
@@ -47,12 +47,13 @@ class ScanResultsViewController: UIViewController {
                 self?.delegate?.didPressScanQRCodeButton()
             })
             .addDisposableTo(disposeBag)
+        
     }
     
     func linkViewModel () {
         viewModel
             .productNameValue
-            .bindTo(UILabel(frame: .zero).rx.text)
+            .bindTo(productNameLabel.rx.text)
             .addDisposableTo(disposeBag)
         
         viewModel
@@ -61,24 +62,20 @@ class ScanResultsViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         viewModel
+            .productImageValue
+            .bindTo(productImageView.rx.image)
+            .addDisposableTo(disposeBag)
+        
+        viewModel
             .productFunLevelValue
             .subscribe(onNext: { (funLevel) in
-                self.funLevelMeter.progress = Double(funLevel)
+                self.funLevelMeter.progress = Double(funLevel/100)
             }).addDisposableTo(disposeBag)
         
-        viewModel
-            .productNameValue
-            .bindTo(productNameLabel.rx.text)
-            .addDisposableTo(disposeBag)
-        
-        viewModel
-            .productNameValue
-            .bindTo(productNameLabel.rx.text)
-            .addDisposableTo(disposeBag)
-        
-        viewModel
-            .productNameValue
-            .bindTo(productNameLabel.rx.text)
+        machtSpassButton.rx.tap
+            .subscribe(onNext: { [weak self] () in
+                self?.delegate?.didPressScanQRCodeButton()
+            })
             .addDisposableTo(disposeBag)
         
         
@@ -91,8 +88,13 @@ class ScanResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        productDetailsTableView.dataSource = self
-        productDetailsTableView.delegate = self
+        funLevelMeter.stops = [
+            (0.0, UIColor.red),
+            (0.25, UIColor.orange),
+            (0.5, UIColor.yellow),
+            (0.75, UIColor.green)
+        ]
+        
         linkViewModel()
     }
 }

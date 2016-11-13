@@ -6,15 +6,25 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MMTextProWebTT-Bold.ttf">
+            <string>MMTextProWebTT-Bold</string>
+        </array>
+        <array key="MMTextProWebTT-Regular.ttf">
+            <string>MMTextProWebTT-Regular</string>
+        </array>
+        <array key="MMTextProWebTT-Semibold.ttf">
+            <string>MMTextProWebTT-Semibold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanResultsViewController" customModule="MachtSpass" customModuleProvider="target">
             <connections>
                 <outlet property="funLevelMeter" destination="Go3-q6-OfW" id="uJE-dt-gIn"/>
+                <outlet property="machtSpassButton" destination="k7t-ng-kAt" id="MRd-CB-pre"/>
                 <outlet property="productDetailLabel" destination="Mwv-Fi-Eh0" id="y2k-dH-B4K"/>
-                <outlet property="productDetailsTableView" destination="JB7-df-auC" id="6eN-Tu-QjC"/>
                 <outlet property="productImageView" destination="p2p-Yk-uzc" id="kTJ-Y2-PDw"/>
                 <outlet property="productNameLabel" destination="KXX-TI-YRG" id="CwJ-nZ-4TJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -25,103 +35,89 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="JB7-df-auC">
-                    <rect key="frame" x="0.0" y="8" width="375" height="651"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    <view key="tableHeaderView" contentMode="scaleToFill" id="AC6-R9-TWP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="298"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="emC-7n-BbA">
-                                <rect key="frame" x="23" y="8" width="329" height="282"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-XF-BFp">
-                                        <rect key="frame" x="0.0" y="0.0" width="329" height="139"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2p-Yk-uzc">
-                                                <rect key="frame" x="0.0" y="0.0" width="98" height="139"/>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-fI-oZG">
-                                                <rect key="frame" x="113" y="0.0" width="216" height="139"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="edi-bq-tyE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="216" height="22"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXX-TI-YRG">
-                                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="22"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="22" id="hu8-1v-GDv"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwv-Fi-Eh0">
-                                                        <rect key="frame" x="0.0" y="22" width="216" height="117"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbh-wH-cu8">
-                                        <rect key="frame" x="0.0" y="159" width="329" height="123"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEZ-0A-r6H">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="123"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="fqB-qg-oTf"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Go3-q6-OfW" customClass="GaugeView" customModule="MachtSpass" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="0.0" width="229" height="123"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="123" id="VY5-xy-wX6"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-ev-xMv">
-                                                <rect key="frame" x="279" y="0.0" width="50" height="123"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="xzf-fb-D7i"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7t-ng-kAt">
-                                <rect key="frame" x="23" y="149" width="329" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.87450980392156863" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="Macht das Teil Spass ?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="emC-7n-BbA" firstAttribute="top" secondItem="AC6-R9-TWP" secondAttribute="topMargin" id="V5o-lk-89Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="emC-7n-BbA" secondAttribute="trailing" constant="15" id="XD1-DQ-r0B"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="emC-7n-BbA" secondAttribute="bottom" id="vxu-QV-6PD"/>
-                            <constraint firstItem="emC-7n-BbA" firstAttribute="leading" secondItem="AC6-R9-TWP" secondAttribute="leadingMargin" constant="15" id="ycO-gg-nsj"/>
-                        </constraints>
-                    </view>
-                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="emC-7n-BbA">
+                    <rect key="frame" x="16" y="63" width="343" height="541"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2p-Yk-uzc">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="207"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="207" id="csh-QN-db5"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-XF-BFp">
+                            <rect key="frame" x="0.0" y="227" width="343" height="115"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-fI-oZG">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="115"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="edi-bq-tyE">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="25"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXX-TI-YRG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="156.5" height="25"/>
+                                                    <fontDescription key="fontDescription" name="MMTextProWebTT-Bold" family="MM Text Pro WebTT" pointSize="28"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwv-Fi-Eh0">
+                                            <rect key="frame" x="0.0" y="25" width="343" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="Uvm-TX-eLi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MMTextProWebTT-Regular" family="MM Text Pro WebTT" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7t-ng-kAt">
+                            <rect key="frame" x="0.0" y="362" width="343" height="36"/>
+                            <color key="backgroundColor" red="0.88465023040771484" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="wlf-fX-qqD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="MMTextProWebTT-Semibold" family="MM Text Pro WebTT" pointSize="17"/>
+                            <state key="normal" title="Macht dieses Produkt Spaß ?">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbh-wH-cu8">
+                            <rect key="frame" x="0.0" y="418" width="343" height="123"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEZ-0A-r6H">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="123"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Go3-q6-OfW" customClass="GaugeView" customModule="MachtSpass" customModuleProvider="target">
+                                    <rect key="frame" x="50" y="0.0" width="243" height="123"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-ev-xMv">
+                                    <rect key="frame" x="293" y="0.0" width="50" height="123"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Go3-q6-OfW" firstAttribute="leading" secondItem="lbh-wH-cu8" secondAttribute="leading" constant="50" id="MAs-9r-oHL"/>
+                                <constraint firstItem="Go3-q6-OfW" firstAttribute="centerX" secondItem="lbh-wH-cu8" secondAttribute="centerX" id="k0R-Fj-BU1"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="0cO-XF-BFp" firstAttribute="centerX" secondItem="emC-7n-BbA" secondAttribute="centerX" id="oNN-wQ-jnY"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottomMargin" secondItem="JB7-df-auC" secondAttribute="bottom" id="957-Me-VlZ"/>
-                <constraint firstItem="JB7-df-auC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="MzS-Vj-bJv"/>
-                <constraint firstItem="JB7-df-auC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pyu-xW-Cft"/>
-                <constraint firstAttribute="trailing" secondItem="JB7-df-auC" secondAttribute="trailing" id="xOi-47-Zcb"/>
+                <constraint firstItem="emC-7n-BbA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="K2Y-7S-mTr"/>
+                <constraint firstItem="emC-7n-BbA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="QwN-mV-4wt"/>
+                <constraint firstItem="emC-7n-BbA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="63" id="qyM-Di-YAJ"/>
+                <constraint firstItem="emC-7n-BbA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="txi-Ca-UoY"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="54.5"/>
         </view>

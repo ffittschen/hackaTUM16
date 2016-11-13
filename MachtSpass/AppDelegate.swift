@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         notificationHandler = NotificationHandler()
+        UIApplication.shared.registerForRemoteNotifications()
         
         // Clear application badge when launching the app
         application.applicationIconBadgeNumber = 0

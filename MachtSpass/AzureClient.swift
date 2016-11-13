@@ -17,6 +17,6 @@ class AzureClient {
     private(set) var client: MSClient
     
     private init () {
-        client = MSClient(applicationURLString:"https://machtspass.azurewebsites.net/")
+        client = MSClient(applicationURLString:"https://push-mobile-app.azurewebsites.net")
     }
 }

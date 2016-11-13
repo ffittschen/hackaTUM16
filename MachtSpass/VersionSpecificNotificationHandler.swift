@@ -87,8 +87,5 @@ extension VersionSpecificNotificationHandler {
             return
         }
         
-//        ParrotAPIController.getInfo(for: parrot) {
-//            completionHandler(.newData)
-//        }
     }
 }

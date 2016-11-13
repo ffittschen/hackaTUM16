@@ -31,8 +31,10 @@
 		04173F351DD5E86D00F22E67 /* HomeTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04173F331DD5E86D00F22E67 /* HomeTabViewController.xib */; };
 		04737E4B1DD7711B003C89F7 /* Hue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04737E4A1DD7711B003C89F7 /* Hue.framework */; };
 		04737E531DD7A3E6003C89F7 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04737E521DD7A3E6003C89F7 /* MicrosoftAzureMobile.framework */; };
-		048C6C561DD818E500A63A9B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C6C551DD818E500A63A9B /* Profile.swift */; };
-		048C6C581DD819D000A63A9B /* AppSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C6C571DD819D000A63A9B /* AppSetup.swift */; };
+		048C6C591DD849FE00A63A9B /* MMHeadlineProWebTT-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D2CE671DD80B6C00F009A0 /* MMHeadlineProWebTT-Regular.ttf */; };
+		048C6C5A1DD849FE00A63A9B /* MMTextProWebTT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D2CE681DD80B6C00F009A0 /* MMTextProWebTT-Bold.ttf */; };
+		048C6C5B1DD849FE00A63A9B /* MMTextProWebTT-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D2CE691DD80B6C00F009A0 /* MMTextProWebTT-Regular.ttf */; };
+		048C6C5C1DD849FE00A63A9B /* MMTextProWebTT-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D2CE6A1DD80B6C00F009A0 /* MMTextProWebTT-Semibold.ttf */; };
 		04D2CE4D1DD7AB5F00F009A0 /* VersionSpecificNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE4C1DD7AB5F00F009A0 /* VersionSpecificNotificationHandler.swift */; };
 		04D2CE4F1DD7ADCF00F009A0 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE4E1DD7ADCF00F009A0 /* NotificationHandler.swift */; };
 		04D2CE511DD7AE2800F009A0 /* MachtSpassAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE501DD7AE2800F009A0 /* MachtSpassAction.swift */; };
@@ -102,8 +104,6 @@
 		04737E4A1DD7711B003C89F7 /* Hue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hue.framework; path = Carthage/Build/iOS/Hue.framework; sourceTree = "<group>"; };
 		04737E511DD77B9B003C89F7 /* MachtSpass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MachtSpass.entitlements; sourceTree = "<group>"; };
 		04737E521DD7A3E6003C89F7 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicrosoftAzureMobile.framework; path = Carthage/Build/iOS/MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
-		048C6C551DD818E500A63A9B /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		048C6C571DD819D000A63A9B /* AppSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSetup.swift; sourceTree = "<group>"; };
 		04D2CE4C1DD7AB5F00F009A0 /* VersionSpecificNotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionSpecificNotificationHandler.swift; sourceTree = "<group>"; };
 		04D2CE4E1DD7ADCF00F009A0 /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		04D2CE501DD7AE2800F009A0 /* MachtSpassAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachtSpassAction.swift; sourceTree = "<group>"; };
@@ -198,7 +198,6 @@
 				04173F2D1DD5E5D600F22E67 /* Network */,
 				04D2CE541DD7B37C00F009A0 /* Model */,
 				04173EFD1DD5DC0A00F22E67 /* Features */,
-				048C6C571DD819D000A63A9B /* AppSetup.swift */,
 			);
 			path = MachtSpass;
 			sourceTree = "<group>";
@@ -279,7 +278,6 @@
 			children = (
 				04D2CE551DD7B38700F009A0 /* MachtSpass.swift */,
 				04D2CE5D1DD7CA4B00F009A0 /* Product.swift */,
-				048C6C551DD818E500A63A9B /* Profile.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -439,8 +437,12 @@
 				04173EDA1DD5DBB300F22E67 /* LaunchScreen.storyboard in Resources */,
 				04173F351DD5E86D00F22E67 /* HomeTabViewController.xib in Resources */,
 				04173ED71DD5DBB300F22E67 /* Assets.xcassets in Resources */,
+				048C6C591DD849FE00A63A9B /* MMHeadlineProWebTT-Regular.ttf in Resources */,
+				048C6C5C1DD849FE00A63A9B /* MMTextProWebTT-Semibold.ttf in Resources */,
 				C4B4CFA31DD756A6006CA897 /* ScanResultsViewController.xib in Resources */,
 				04D2CE621DD7D35C00F009A0 /* AirPods.jpg in Resources */,
+				048C6C5B1DD849FE00A63A9B /* MMTextProWebTT-Regular.ttf in Resources */,
+				048C6C5A1DD849FE00A63A9B /* MMTextProWebTT-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,8 +522,6 @@
 				C45E813C1DD744F900A34143 /* QRScannerTabViewCoordinator.swift in Sources */,
 				04D2CE531DD7B15B00F009A0 /* AzureClient.swift in Sources */,
 				04173F2C1DD5E5D200F22E67 /* Backend.swift in Sources */,
-				048C6C561DD818E500A63A9B /* Profile.swift in Sources */,
-				048C6C581DD819D000A63A9B /* AppSetup.swift in Sources */,
 				C4B4CFA21DD756A6006CA897 /* ScanResultsViewController.swift in Sources */,
 				04173ED21DD5DBB300F22E67 /* HomeTabViewController.swift in Sources */,
 				04D2CE661DD7EC2A00F009A0 /* Observable+Extension.swift in Sources */,

@@ -14,7 +14,7 @@ enum BackendService {
     case postProfile(name: String, avatar: String, pushID: String, notificationActive: Bool)
     case updateProfile(id: String)
     case product(id: String, pushID: String, userID: String)
-    case postQuestion
+    case postQuestion(userID: String, productID: String)
     case pullQuestion(id: String)
     case getQuestion(id: String)
     case postAnswer
@@ -63,6 +63,11 @@ extension BackendService: TargetType {
                 "productid": id,
                 "pushid": pushID,
                 "userid": userID
+            ]
+        case .postQuestion(let userID, let productID):
+            return [
+                "userid": userID,
+                "productid": productID
             ]
         default:
             return nil

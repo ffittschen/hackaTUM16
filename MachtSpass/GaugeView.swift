@@ -11,7 +11,7 @@ import UIKit
 import Darwin
 
 @IBDesignable class GaugeView: UIView {
-   
+    
     // Style
     var stops: Array<(stop: Double, color: UIColor)> = [ (0.0, UIColor.green) ] {
         didSet {
@@ -22,7 +22,7 @@ import Darwin
     var width: CGFloat = 30.0
     
     var animateUpdates: Bool = true
-   
+    
     // Data
     private var _progress: Double = 0.0
     private var _previousProgress: Double = 0.0
@@ -33,7 +33,7 @@ import Darwin
         set(value){
             _previousProgress = _progress
             _progress = value > 1 ? 1 : value < 0 ? 0 : value
-        
+            
             if self.animateUpdates {
                 self.fillLayer.progress = _progress
                 self.animate()
@@ -43,7 +43,7 @@ import Darwin
             }
         }
     }
-   
+    
     // Layers
     private let fillLayer: GaugeLayer = GaugeLayer()
     private let borderLayer: CAShapeLayer = CAShapeLayer()
@@ -53,7 +53,7 @@ import Darwin
         
         self.commonInit()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -65,7 +65,7 @@ import Darwin
         
         self.initBorderLayer()
         self.initFillLayer()
-
+        
         self.layer.addSublayer(self.fillLayer)
         self.layer.addSublayer(self.borderLayer)
     }
@@ -141,9 +141,9 @@ class GaugeLayer: CALayer {
             if self.stops.count == 1 {
                 return stops.first!.color
             }
-        
+            
             var c: UIColor = stops.first!.color
-           
+            
             for (value, color) in self.stops {
                 if value <= self.progress {
                     c = color
@@ -156,11 +156,11 @@ class GaugeLayer: CALayer {
     
     override init() {
         super.init()
-
+        
         self.contentsScale = UIScreen.main.scale
         self.setNeedsDisplay()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -195,13 +195,13 @@ class GaugeLayer: CALayer {
         
         path.append(innerPath)
         path.usesEvenOddFillRule = true
-       
+        
         ctx.addPath(path.cgPath)
-       
+        
         ctx.setFillColor(self.color.cgColor)
-        let _ = CGContext.fillPath(ctx)
-//        CGContextEOFillPath(ctx)
+        
+        path.usesEvenOddFillRule = true
+        ctx.fillPath(using: CGPathFillRule.evenOdd)
     }
     
 }
-

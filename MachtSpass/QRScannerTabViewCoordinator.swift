@@ -96,8 +96,15 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
                     switch result {
                     case .success(let response):
                         let json = try! JSON(data: response.data)
-                        
                         self.scanResultsViewModel.productName.value = try! json.getString(at: "product", "title")
+                        let imageURL = URL(string: try! json.getString(at: "product", "image"))
+                        let task = URLSession.shared.dataTask(with: imageURL!) { data, response, error in
+                            guard let data = data, error == nil else { return }
+                            
+                            DispatchQueue.main.sync() {
+                                self.scanResultsViewModel.productImage.value = UIImage(data: data)
+                            }
+                        }.resume()
                         self.scanResultsViewModel.productDescription.value = try! json.getString(at: "product", "content")
                         self.scanResultsViewModel.productLikes.value = try! json.getInt(at: "rating", "likes")
                         self.scanResultsViewModel.productDislikes.value = try! json.getInt(at: "rating", "dislikes")
@@ -141,11 +148,23 @@ extension QRScannerTabViewCoordinator: ScanResultsViewControllerDelegate {
         start()
     }
     
-    func didTouchMakesFunButton() {
-        //  Request server to send notifications to the right users
+    func didPressMachtSpassButton() {
+        let userID = UserDefaults.standard.string(forKey: "userID") ?? ""
         
-        //  ...
+        scanResultsViewModel.productID
+            .takeLast(1)
+            .subscribe(onNext: { [weak self] productID in
+                self?.backendProvider.request(.postQuestion(userID: userID, productID: productID)) { result in
+                    switch result {
+                    case .success(let response):
+                        Log.debug?.message("Posted question. Response: \(response)")
+                    case .failure(let error):
+                        Log.error?.message("Error while pressing machtSpassButton: \(error)")
+                    }
+                    
+                }
+            })
+            .addDisposableTo(disposeBag)
         
-
     }
 }
