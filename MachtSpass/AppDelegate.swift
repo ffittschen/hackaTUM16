@@ -36,11 +36,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
-        
         notificationHandler = NotificationHandler()
         
         // Clear application badge when launching the app
         application.applicationIconBadgeNumber = 0
+        
+        // Style UINavigationBar
+        UINavigationBar.appearance().barTintColor = .white
+        UINavigationBar.appearance().tintColor = UIColor(hex: "#df0000")
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor(hex: "#df0000")]
         
         return true
     }
