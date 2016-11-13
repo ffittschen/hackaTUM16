@@ -10,25 +10,25 @@ import Foundation
 import Moya
 
 enum BackendService {
-    case getProfile(String)
-    case postProfile
-    case updateProfile(String)
-    case product(String)
+    case getProfile(id: String)
+    case postProfile(name: String, avatar: String, pushID: String, notificationActive: Bool)
+    case updateProfile(id: String)
+    case product(id: String, pushID: String, userID: String)
     case postQuestion
-    case pullQuestion(String)
-    case getQuestion(String)
+    case pullQuestion(id: String)
+    case getQuestion(id: String)
     case postAnswer
 }
 
 extension BackendService: TargetType {
-    var baseURL: URL { return URL(string: "https://machtspass-server.azurewebsites.net/api/v1")! }
+    var baseURL: URL { return URL(string: "https://machtspass-api.azurewebsites.net/api/v1")! }
     
     var path: String {
         switch self {
         case .getProfile(let id):       return "/profile/\(id)"
         case .postProfile:              return "/profile"
         case .updateProfile(let id):    return "/profile/\(id)"
-        case .product(let id):          return "/product/\(id)"
+        case .product:                  return "/product"
         case .postQuestion:             return "/question"
         case .pullQuestion(let id):     return "/question/\(id)/status"
         case .getQuestion(let id):      return "/question/\(id)"
@@ -41,7 +41,7 @@ extension BackendService: TargetType {
         case .getProfile:       return .get
         case .postProfile:      return .post
         case .updateProfile:    return .put
-        case .product:          return .get
+        case .product:          return .post
         case .postQuestion:     return .post
         case .pullQuestion:     return .get
         case .getQuestion:      return .get
@@ -51,6 +51,19 @@ extension BackendService: TargetType {
     
     var parameters: [String: Any]? {
         switch self {
+        case .postProfile(let name, let avatar, let pushID, let notificationActive):
+            return [
+                "name": name,
+                "avatar": avatar,
+                "pushid": pushID,
+                "notificationactive": notificationActive
+            ]
+        case .product(let id, let pushID, let userID):
+            return [
+                "productid": id,
+                "pushid": pushID,
+                "userid": userID
+            ]
         default:
             return nil
         }

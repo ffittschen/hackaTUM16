@@ -15,7 +15,7 @@ import Freddy
 struct ScanResultsViewModel {
     fileprivate let disposeBag: DisposeBag
     let qrContent: Variable<String?>
-    let productID: Observable<Int>
+    let productID: Observable<String>
     
     let productImage = Variable<UIImage?>(nil)
     let productName = Variable<String>("")
@@ -29,14 +29,6 @@ struct ScanResultsViewModel {
         
         qrContent = Variable<String?>(nil)
         productID = qrContent.asObservable()
-            .map({ qrContent -> Int? in
-                guard let qrContent = qrContent,
-                    let productID = Int(qrContent) else {
-                        return nil
-                }
-                
-                return productID
-            })
             .ignoreNil()
     }
 }

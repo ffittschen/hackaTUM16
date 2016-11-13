@@ -32,7 +32,7 @@ class AppCoordinator: NSObject, Coordinator {
         disposeBag = DisposeBag()
    		homeTabCoordinator = HomeTabCoordinator()
 		scannerTabCoordinator = QRScannerTabViewCoordinator()
-    	tabs = [homeTabCoordinator, scannerTabCoordinator]
+    	tabs = [scannerTabCoordinator, homeTabCoordinator]
         
         super.init()
     }
