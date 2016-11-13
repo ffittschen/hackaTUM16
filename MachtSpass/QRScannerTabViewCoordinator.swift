@@ -12,7 +12,9 @@ import RxSwift
 import BarcodeScanner
 import CleanroomLogger
 import RxMoya
+import Moya
 import Freddy
+import Alamofire
 
 class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
     
@@ -24,6 +26,12 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
     fileprivate let viewController: ScanResultsViewController
     fileprivate let barcodeScannerController: BarcodeScannerController
     fileprivate let backendProvider: RxMoyaProvider<BackendService>
+    
+    let endpointClosure = { (target: BackendService) -> Endpoint<BackendService> in
+        let url = target.baseURL.appendingPathComponent(target.path).absoluteString
+        let endpoint: Endpoint<BackendService> = Endpoint<BackendService>(URL: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: JSONEncoding.default )
+        return endpoint.adding(newHttpHeaderFields: ["Content-Type": "application/json"])
+    }
     
     override init() {
         disposeBag = DisposeBag()
@@ -55,7 +63,7 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
         viewController.navigationItem.titleView = titleImageView
         
         //  Init moya Backend Provider 
-        backendProvider = RxMoyaProvider<BackendService>()
+        backendProvider = RxMoyaProvider<BackendService>(endpointClosure: endpointClosure)
         
         super.init()
         
@@ -78,6 +86,28 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
         } else {
             showBarcodeScanner()
         }
+        
+        let pushID = UserDefaults.standard.string(forKey: "PushDeviceToken") ?? ""
+        let userID = UserDefaults.standard.string(forKey: "userID") ?? ""
+        
+        scanResultsViewModel.productID.asObservable()
+            .subscribe(onNext: { (productID: String) in
+                self.backendProvider.request(.product(id: productID, pushID: pushID, userID: userID), completion: { result in
+                    switch result {
+                    case .success(let response):
+                        let json = try! JSON(data: response.data)
+                        
+                        self.scanResultsViewModel.productName.value = try! json.getString(at: "product", "title")
+                        self.scanResultsViewModel.productDescription.value = try! json.getString(at: "product", "content")
+                        self.scanResultsViewModel.productLikes.value = try! json.getInt(at: "rating", "likes")
+                        self.scanResultsViewModel.productDislikes.value = try! json.getInt(at: "rating", "dislikes")
+                        self.scanResultsViewModel.productFunLevel.value = try! json.getInt(at: "rating", "funfactor")
+                    case .failure(let error):
+                        Log.error?.message("Error while getting product information: \(error)")
+                    }
+                })
+            })
+            .addDisposableTo(disposeBag)
     }
 }
 
@@ -89,24 +119,12 @@ extension QRScannerTabViewCoordinator: BarcodeScannerCodeDelegate {
         
         barcodeScannerController.resetWithError()
         
-        
-        backendProvider.request(.product(code)).subscribe { event in
-            switch event {
-            case .next(let response):
-                print("Product: \(try! Product(json: try! JSON(data: response.data)))")
-            case .error(let error):
-                Log.debug?.message("ServerError: Invalid response from Backend: \(error)")
-            case .completed:break
-            }
-            
-        }.addDisposableTo(disposeBag)
-        
         navigationController.popViewController(animated: true)
     }
 }
 
 extension QRScannerTabViewCoordinator: BarcodeScannerErrorDelegate {
-    func barcodeScanner(_ controller: BarcodeScannerController, didReceiveError error: Error) {
+    func barcodeScanner(_ controller: BarcodeScannerController, didReceiveError error: Swift.Error) {
         Log.error?.message("Error while scanning a barcode:")
         Log.error?.value(error)
     }
