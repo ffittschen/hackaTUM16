@@ -90,7 +90,5 @@ extension BackendService: TargetType {
         case .updateProfile(_):
             return "{\"_id\": \"5827b7d26c92d1134dcd7f73\",\"updatedAt\": \"2016-11-13T00:46:11.136Z\",\"createdAt\": \"2016-11-13T00:46:11.136Z\",\"name\": \"Mrs. Sarina Dibbert\",\"avatar\": \"\",\"pushid\": \"\",\"notificationactive\": true,\"bucks\": 12,\"__v\": 0,\"id\": \"5827b7d26c92d1134dcd7f73\"}".data(using: .utf8)!
         }
-        return Data()
-    }
-    
+    }    
 }

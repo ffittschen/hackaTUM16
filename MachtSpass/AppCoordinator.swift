@@ -15,6 +15,7 @@ protocol Coordinator {
     func start()
 }
 
+//  Coordinates Main Tab Navigation
 class AppCoordinator: NSObject, Coordinator {
     
     fileprivate let disposeBag: DisposeBag
