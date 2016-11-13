@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import RxSwift
 import Hue
+import Moya
 
 protocol Coordinator {
     func start()
@@ -37,6 +38,15 @@ class AppCoordinator: NSObject, Coordinator {
     }
     
     func start() {
+        let deviceID = UserDefaults.standard.value(forKey: "PushDeviceToken")
+        print(deviceID)
+//        MoyaProvider<BackendService>().request(.getProfile(deviceID)) { response in
+//            
+//            print("Got response: \(response)")
+//                
+//        }
+        
+        
         tabBarController.viewControllers = tabs.map() { coordinator -> UIViewController in
             return coordinator.navigationController
         }

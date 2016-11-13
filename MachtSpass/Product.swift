@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Freddy
 
 struct Product {
     let name: String
@@ -15,5 +16,13 @@ struct Product {
     init(name: String, imageURL: URL) {
         self.name = name
         self.imageURL = imageURL
+    }
+}
+
+
+extension Product: JSONDecodable {
+    init(json: JSON) throws {
+        self.name = try json.getString(at: "product", "title")
+        self.imageURL = URL(string: try json.getString(at: "product", "image"))!
     }
 }

@@ -40,6 +40,7 @@
 		04D2CE621DD7D35C00F009A0 /* AirPods.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04D2CE611DD7D35C00F009A0 /* AirPods.jpg */; };
 		04D2CE641DD7E0C100F009A0 /* BarcodeScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D2CE631DD7E0C100F009A0 /* BarcodeScanner.framework */; };
 		04D2CE661DD7EC2A00F009A0 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2CE651DD7EC2A00F009A0 /* Observable+Extension.swift */; };
+		C4257DDD1DD812FC00941D73 /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4257DDC1DD812FC00941D73 /* Freddy.framework */; };
 		C45E813C1DD744F900A34143 /* QRScannerTabViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */; };
 		C49D548E1DD7657000FCEE74 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D548D1DD7657000FCEE74 /* GaugeView.swift */; };
 		C4B4CF9F1DD7548B006CA897 /* UIDevice+isSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B4CF9E1DD7548B006CA897 /* UIDevice+isSimulator.swift */; };
@@ -108,6 +109,7 @@
 		04D2CE611DD7D35C00F009A0 /* AirPods.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AirPods.jpg; sourceTree = "<group>"; };
 		04D2CE631DD7E0C100F009A0 /* BarcodeScanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BarcodeScanner.framework; path = Carthage/Build/iOS/BarcodeScanner.framework; sourceTree = "<group>"; };
 		04D2CE651DD7EC2A00F009A0 /* Observable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
+		C4257DDC1DD812FC00941D73 /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = "<group>"; };
 		C45E813B1DD744F900A34143 /* QRScannerTabViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerTabViewCoordinator.swift; sourceTree = "<group>"; };
 		C49D548D1DD7657000FCEE74 /* GaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
 		C4B4CF9E1DD7548B006CA897 /* UIDevice+isSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+isSimulator.swift"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4257DDD1DD812FC00941D73 /* Freddy.framework in Frameworks */,
 				C4F0BC641DD7A00C00BB16C4 /* pop.framework in Frameworks */,
 				04173F1E1DD5E58600F22E67 /* Alamofire.framework in Frameworks */,
 				04D2CE641DD7E0C100F009A0 /* BarcodeScanner.framework in Frameworks */,
@@ -221,6 +224,7 @@
 		04173F001DD5E00400F22E67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4257DDC1DD812FC00941D73 /* Freddy.framework */,
 				04D2CE631DD7E0C100F009A0 /* BarcodeScanner.framework */,
 				04737E521DD7A3E6003C89F7 /* MicrosoftAzureMobile.framework */,
 				04737E4A1DD7711B003C89F7 /* Hue.framework */,
@@ -462,6 +466,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/MicrosoftAzureMobile.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/pop.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/BarcodeScanner.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Freddy.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -664,7 +669,7 @@
 				);
 				INFOPLIST_FILE = MachtSpass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "com.fittschen.machtSpass Development";
@@ -688,7 +693,7 @@
 				);
 				INFOPLIST_FILE = MachtSpass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.HackaTUM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "com.fittschen.machtSpass AppStore";

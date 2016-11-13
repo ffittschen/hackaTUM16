@@ -11,6 +11,8 @@ import UIKit
 import RxSwift
 import BarcodeScanner
 import CleanroomLogger
+import RxMoya
+import Freddy
 
 class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
     
@@ -21,6 +23,7 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
     
     fileprivate let viewController: ScanResultsViewController
     fileprivate let barcodeScannerController: BarcodeScannerController
+    fileprivate let backendProvider: RxMoyaProvider<BackendService>
     
     override init() {
         disposeBag = DisposeBag()
@@ -50,6 +53,9 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
         titleImageView.image = #imageLiteral(resourceName: "Media Markt")
         titleImageView.contentMode = .scaleAspectFit
         viewController.navigationItem.titleView = titleImageView
+        
+        //  Init moya Backend Provider 
+        backendProvider = RxMoyaProvider<BackendService>()
         
         super.init()
         
@@ -82,7 +88,19 @@ extension QRScannerTabViewCoordinator: BarcodeScannerCodeDelegate {
         scanResultsViewModel.qrContent.value = code
         
         barcodeScannerController.resetWithError()
-        // TODO: dismiss only, when results are found
+        
+        
+        backendProvider.request(.product(code)).subscribe { event in
+            switch event {
+            case .next(let response):
+                print("Product: \(try! Product(json: try! JSON(data: response.data)))")
+            case .error(let error):
+                Log.debug?.message("ServerError: Invalid response from Backend: \(error)")
+            case .completed:break
+            }
+            
+        }.addDisposableTo(disposeBag)
+        
         navigationController.popViewController(animated: true)
     }
 }
@@ -110,11 +128,6 @@ extension QRScannerTabViewCoordinator: ScanResultsViewControllerDelegate {
         
         //  ...
         
-        
-        
-        
-        
-        //  Testing Notifications
-        
+
     }
 }
