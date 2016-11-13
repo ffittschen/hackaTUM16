@@ -52,7 +52,7 @@ class ScanResultsViewController: UIViewController {
     func linkViewModel () {
         viewModel.productID.asObservable()
             .subscribe(onNext: { productID in
-                RxMoyaProvider<BackendService>().request(.product(productID), completion: { (response) in
+                RxMoyaProvider<BackendService>().request(.product(""), completion: { (response) in
                     guard let val = response.value else { return }
                     print("RES: \(val)")
                     let json = try! JSON(data: val.data)
