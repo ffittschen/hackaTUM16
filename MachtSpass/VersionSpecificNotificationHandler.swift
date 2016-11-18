@@ -10,13 +10,14 @@ import Foundation
 import UIKit
 import CleanroomLogger
 
+//  Adapted from: https://github.com/designatednerd/iOS10NotificationSample
+
 enum NotificationCategory: String {
     case askForMakesFun = "com.fittschen.machtSpass.askForMakesFun"
     case answeredMakesFun = "com.fittschen.machtSpass.answeredMakesFun"
 }
 
-//MARK: Protocol declaration
-
+//  MARK: Protocol declaration
 protocol VersionSpecificNotificationHandler {
     
     func handleActionWithIdentifier(identifier: String?,
@@ -38,9 +39,9 @@ protocol VersionSpecificNotificationHandler {
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Swift.Void)
 }
 
-//MARK: Default implementation
+//  MARK: Default implementation
 
-//In the default implementaton, handle things which are the same across multiple
+//  In the default implementaton, handle things which are the same across multiple
 extension VersionSpecificNotificationHandler {
     
     func handleActionWithIdentifier(identifier: String?,
@@ -51,7 +52,7 @@ extension VersionSpecificNotificationHandler {
               let action = MachtSpassAction(rawValue: actionIdentifier),
               let machtSpassInfo = userInfo,
               let machtSpass = MachtSpass(userInfo: machtSpassInfo) else {
-                //Nothing to do here except call completion and bail.
+                //  Nothing to do here except call completion and bail.
                 completionHandler()
                 return
         }
@@ -67,7 +68,9 @@ extension VersionSpecificNotificationHandler {
         UserDefaults.standard.setValue(pushTokenString, forKey: "PushDeviceToken")
         
         Log.debug?.message("Registered for push notifications with token: \(pushTokenString)")
-        
+
+//  replaced with custom solution based on node.js because we had issues with Azure and the push certificate
+//
 //        AzureClient.shared.client.push?.registerDeviceToken(deviceToken) { error in
 //            if let error = error {
 //                Log.error?.message("Error registering for push notifications with error: \(error)")

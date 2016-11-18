@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import RxMoya
 import Moya
+import CleanroomLogger
 
 class HomeTabCoordinator: NSObject, TabCoordinator {
     
@@ -21,8 +22,11 @@ class HomeTabCoordinator: NSObject, TabCoordinator {
     fileprivate let backendProvider: RxMoyaProvider<BackendService>
     
     override init() {
+        
+        //  Set tabBarItem attributes
         tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "HomeTabIcon"), selectedImage: nil)
         
+        //  Init viewModel & navigation stack
         viewModel = HomeTabViewModel(funBucks: 42)
         viewController = HomeTabViewController(viewModel: viewModel)
         
@@ -30,6 +34,7 @@ class HomeTabCoordinator: NSObject, TabCoordinator {
         navigationController.tabBarItem = tabBarItem
         navigationController.navigationBar.barTintColor = .white
         
+        //  Set title image of navigationBar
         let titleImageView = UIImageView(frame: CGRect(x: 0, y: 0,
                                                        width: navigationController.navigationBar.bounds.width - 16,
                                                        height: navigationController.navigationBar.bounds.height - 8))
@@ -37,12 +42,26 @@ class HomeTabCoordinator: NSObject, TabCoordinator {
         titleImageView.contentMode = .scaleAspectFit
         viewController.navigationItem.titleView = titleImageView
         
+        //  Init moya Backend Provider
         backendProvider = RxMoyaProvider<BackendService>()
         
         super.init()
+        
+        //  Set the delegates
+        viewController.delegate = self
     }
     
     func start() {
-        //backendProvider.request()
+        
+    }
+}
+
+extension HomeTabCoordinator: HomeTabViewControllerDelegate {
+    func didPressGift() {
+        Log.debug?.message("TODO: handle gift")
+    }
+    
+    func didPressRedeem() {
+        Log.debug?.message("TODO: handle redeem")
     }
 }

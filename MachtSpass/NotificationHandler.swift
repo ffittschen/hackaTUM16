@@ -10,31 +10,33 @@ import Foundation
 import UIKit
 import UserNotifications
 
+//  Adapted from: https://github.com/designatednerd/iOS10NotificationSample
+
 class NotificationHandler: NSObject {
     
     override init() {
         super.init()
-        //Set this object as the delegate to the user notification center
+        //  Set this object as the delegate to the user notification center
         UNUserNotificationCenter.current().delegate = self
         
-        //Set up actions
+        //  Set up actions
         MachtSpassAction.configureNotificationActions()
     }
 }
 
 extension NotificationHandler: UNUserNotificationCenterDelegate {
     
-    // This gets called when a notification comes in while you're in the foreground.
+    //  This gets called when a notification comes in while you're in the foreground.
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Swift.Void) {
         
-        //Modify the notification as you wish, then call the completion handler.
+        //  Modify the notification as you wish, then call the completion handler.
         completionHandler(.alert)
     }
     
     
-    // Called when the user selects an action or dismisses a notification.
+    //  Called when the user selects an action or dismisses a notification.
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Swift.Void) {
@@ -47,7 +49,7 @@ extension NotificationHandler: UNUserNotificationCenterDelegate {
     }
 }
 
-//MARK: - VersionSpecificNotificationHandler conformance
+//  MARK: - VersionSpecificNotificationHandler conformance
 extension NotificationHandler: VersionSpecificNotificationHandler {
     
     private func getAuthStatus(status: @escaping (UNAuthorizationStatus) -> ()) {
@@ -65,10 +67,10 @@ extension NotificationHandler: VersionSpecificNotificationHandler {
             
             DispatchQueue.main.async {
                 switch status {
-                case .notDetermined: //Not asked yet
+                case .notDetermined:    // Not asked yet
                     hasBeenAsked(false)
-                case .denied, //Asked and denied
-                .authorized: //Asked and accepted
+                case .denied,           // Asked and denied
+                     .authorized:       // Asked and accepted
                     hasBeenAsked(true)
                 }
             }
@@ -123,18 +125,18 @@ extension NotificationHandler: VersionSpecificNotificationHandler {
         content.attachments = [attachment]
         
         
-        //Note: For a remote notification to invoke your Notification Content extension, you'd need to add this same category identifier as the value for the category key in the payload dictionary.
+        //  Note: For a remote notification to invoke your Notification Content extension, you'd need to add this same category identifier as the value for the category key in the payload dictionary.
         content.categoryIdentifier = NotificationCategory.askForMakesFun.rawValue
         
-        //Set up a time-based trigger
+        //  Set up a time-based trigger
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
         
-        //Set up the request based on the trigger.
+        //  Set up the request based on the trigger.
         let request = UNNotificationRequest(identifier: resourceName,
                                             content: content,
                                             trigger: trigger)
         
-        //Schedule the notification
+        //  Schedule the notification
         UNUserNotificationCenter.current().add(request) {
             error in
             if let error = error {

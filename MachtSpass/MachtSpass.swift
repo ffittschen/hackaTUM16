@@ -7,8 +7,9 @@
 //
 
 import Foundation
-import UIKit
 
+
+/// Model that holds the `Product` and the choice, if the `Product` makes fun
 struct MachtSpass {
     let product: Product
     let machtSpass: Bool?

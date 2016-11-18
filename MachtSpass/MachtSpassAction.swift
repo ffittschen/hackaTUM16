@@ -10,6 +10,8 @@ import Foundation
 import UserNotifications
 import CleanroomLogger
 
+//  Adapted from: https://github.com/designatednerd/iOS10NotificationSample
+
 enum MachtSpassAction: String {
     case machtSpass = "com.fittschen.machtSpass"
     case machtKeinenSpass = "com.fittschen.machtKeinenSpass"

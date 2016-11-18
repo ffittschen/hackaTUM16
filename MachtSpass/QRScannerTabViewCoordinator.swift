@@ -14,19 +14,19 @@ import CleanroomLogger
 import RxMoya
 import Moya
 import Freddy
-import Alamofire
 
 class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
     
-    fileprivate let disposeBag: DisposeBag
     let tabBarItem: UITabBarItem
     let navigationController: UINavigationController
-    var scanResultsViewModel: ScanResultsViewModel
+    var viewModel: ScanResultsViewModel
     
+    fileprivate let disposeBag: DisposeBag
     fileprivate let viewController: ScanResultsViewController
     fileprivate let barcodeScannerController: BarcodeScannerController
     fileprivate let backendProvider: RxMoyaProvider<BackendService>
     
+    //  This closure adds `application/json` as header and transmits the data in a way known as `raw` in other tools, e.g. Postman
     let endpointClosure = { (target: BackendService) -> Endpoint<BackendService> in
         let url = target.baseURL.appendingPathComponent(target.path).absoluteString
         let endpoint: Endpoint<BackendService> = Endpoint<BackendService>(URL: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: JSONEncoding.default )
@@ -45,16 +45,15 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
         barcodeScannerController = BarcodeScannerController()
         barcodeScannerController.edgesForExtendedLayout = []
         
-        //  Init model & navigation stack
-        scanResultsViewModel = ScanResultsViewModel()
-        
-        viewController = ScanResultsViewController(viewModel: scanResultsViewModel)
+        //  Init viewModel & navigation stack
+        viewModel = ScanResultsViewModel()
+        viewController = ScanResultsViewController(viewModel: viewModel)
         
         navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem = tabBarItem
         navigationController.navigationBar.barTintColor = .white
         
-        //  Set title image
+        //  Set title image of navigationBar
         let titleImageView = UIImageView(frame: CGRect(x: 0, y: 0,
                                                        width: navigationController.navigationBar.bounds.width - 16,
                                                        height: navigationController.navigationBar.bounds.height - 8))
@@ -62,27 +61,22 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
         titleImageView.contentMode = .scaleAspectFit
         viewController.navigationItem.titleView = titleImageView
         
-        //  Init moya Backend Provider 
+        //  Init moya Backend Provider
         backendProvider = RxMoyaProvider<BackendService>(endpointClosure: endpointClosure)
         
         super.init()
         
+        //  Set the delegates
         viewController.delegate = self
         barcodeScannerController.codeDelegate = self
         barcodeScannerController.errorDelegate = self
         barcodeScannerController.dismissalDelegate = self
     }
     
-    private func showBarcodeScanner() {
-        barcodeScannerController.navigationItem.setHidesBackButton(true, animated: false)
-        barcodeScannerController.title = "Scan"
-        navigationController.pushViewController(barcodeScannerController, animated: true)
-    }
-    
-    //  entry point of the view 
     func start() {
+        //  The barcodeScanner uses the camera, therefore we need to mock the value to avoid simulator crashes
         if UIDevice.isSimulator {
-            scanResultsViewModel.qrContent.value = "1234567"
+            viewModel.qrContent.value = "1234567"
         } else {
             showBarcodeScanner()
         }
@@ -90,7 +84,8 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
         let pushID = UserDefaults.standard.string(forKey: "PushDeviceToken") ?? ""
         let userID = UserDefaults.standard.string(forKey: "userID") ?? ""
         
-        scanResultsViewModel.productID.asObservable()
+        //  As soon as we successfully scanned a product, we want to get product information from the backend
+        viewModel.productID.asObservable()
             .subscribe(onNext: { (productID: String) in
                 self.backendProvider.request(.product(id: productID, pushID: pushID, userID: userID), completion: { result in
                     switch result {
@@ -102,19 +97,7 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
                             UserDefaults.standard.set(userID, forKey: "userID")
                         }
                         
-                        self.scanResultsViewModel.productName.value = try! json.getString(at: "product", "title")
-                        let imageURL = URL(string: try! json.getString(at: "product", "image"))
-                        let task = URLSession.shared.dataTask(with: imageURL!) { data, response, error in
-                            guard let data = data, error == nil else { return }
-                            
-                            DispatchQueue.main.sync() {
-                                self.scanResultsViewModel.productImage.value = UIImage(data: data)
-                            }
-                        }.resume()
-                        self.scanResultsViewModel.productDescription.value = try! json.getString(at: "product", "content")
-                        self.scanResultsViewModel.productLikes.value = try! json.getInt(at: "rating", "likes")
-                        self.scanResultsViewModel.productDislikes.value = try! json.getInt(at: "rating", "dislikes")
-                        self.scanResultsViewModel.productFunLevel.value = try! json.getInt(at: "rating", "funfactor")
+                        self.viewModel.updateProduct(with: json)
                     case .failure(let error):
                         Log.error?.message("Error while getting product information: \(error)")
                     }
@@ -122,14 +105,21 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
             })
             .addDisposableTo(disposeBag)
     }
+    
+    private func showBarcodeScanner() {
+        barcodeScannerController.navigationItem.setHidesBackButton(true, animated: false)
+        barcodeScannerController.title = "Scan"
+        navigationController.pushViewController(barcodeScannerController, animated: true)
+    }
 }
 
 extension QRScannerTabViewCoordinator: BarcodeScannerCodeDelegate {
     func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
         Log.debug?.message("Received Barcode: \(code)")
         
-        scanResultsViewModel.qrContent.value = code
+        viewModel.qrContent.value = code
         
+        //  The normal `.reset()` seems to be buggy / not working, so we use `.resetWithError()`
         barcodeScannerController.resetWithError()
         
         navigationController.popViewController(animated: true)
@@ -150,14 +140,17 @@ extension QRScannerTabViewCoordinator: BarcodeScannerDismissalDelegate {
 }
 
 extension QRScannerTabViewCoordinator: ScanResultsViewControllerDelegate {
+    
+    /// Reset the tab and start scanning for QR codes again
     func didPressScanQRCodeButton() {
         start()
     }
     
+    /// When the MachtSpassButton is being pressed, we send the question to the backend in order to trigger the push notifications
     func didPressMachtSpassButton() {
         let userID = UserDefaults.standard.string(forKey: "userID") ?? ""
         
-        scanResultsViewModel.productID
+        viewModel.productID
             .subscribe(onNext: { productID in
                 self.backendProvider.request(.postQuestion(userID: userID, productID: productID)) { result in
                     switch result {

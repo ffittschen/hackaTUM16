@@ -10,9 +10,8 @@ import Foundation
 import RxSwift
 
 struct HomeTabViewModel {
-    fileprivate let disposeBag: DisposeBag
-    
     fileprivate let _funBucks: Variable<Int>
+    fileprivate let disposeBag: DisposeBag
     
     init(funBucks: Int) {
         _funBucks = Variable<Int>(funBucks)

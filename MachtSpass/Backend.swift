@@ -25,27 +25,30 @@ extension BackendService: TargetType {
     
     var path: String {
         switch self {
-        case .getProfile(let id):       return "/profile/\(id)"
-        case .postProfile:              return "/profile"
-        case .updateProfile(let id):    return "/profile/\(id)"
-        case .product:                  return "/product"
-        case .postQuestion:             return "/question"
-        case .pullQuestion(let id):     return "/question/\(id)/status"
-        case .getQuestion(let id):      return "/question/\(id)"
-        case .postAnswer:               return "/answer"
+        case .getProfile(let id):    return "/profile/\(id)"
+        case .postProfile:           return "/profile"
+        case .updateProfile(let id): return "/profile/\(id)"
+        case .product:               return "/product"
+        case .postQuestion:          return "/question"
+        case .pullQuestion(let id):  return "/question/\(id)/status"
+        case .getQuestion(let id):   return "/question/\(id)"
+        case .postAnswer:            return "/answer"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getProfile:       return .get
-        case .postProfile:      return .post
-        case .updateProfile:    return .put
-        case .product:          return .post
-        case .postQuestion:     return .post
-        case .pullQuestion:     return .get
-        case .getQuestion:      return .get
-        case .postAnswer:       return .post
+        case .getProfile,
+             .pullQuestion,
+             .getQuestion:
+            return .get
+        case .postProfile,
+             .product,
+             .postQuestion,
+             .postAnswer:
+            return .post
+        case .updateProfile:
+            return .put
         }
     }
     

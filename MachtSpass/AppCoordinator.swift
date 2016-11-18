@@ -10,9 +10,16 @@ import Foundation
 import UIKit
 import RxSwift
 import Hue
-import Moya
 
+/**
+ Object that bosses one or more view controllers around by taking all of the driving logic
+ out of the view controllers, and moving that stuff one layer up.
+ 
+ - note:
+ Adapted from: [Coordinators Redux](http://khanlou.com/2015/10/coordinators-redux/)
+ */
 protocol Coordinator {
+    /// Start the work of the `Coordinator`.
     func start()
 }
 
@@ -22,6 +29,7 @@ class AppCoordinator: NSObject, Coordinator {
     fileprivate let disposeBag: DisposeBag
     fileprivate let homeTabCoordinator: HomeTabCoordinator
     fileprivate let scannerTabCoordinator: QRScannerTabViewCoordinator
+    
     private var tabBarController: UITabBarController
     private var tabs: [TabCoordinator]
     
@@ -38,15 +46,6 @@ class AppCoordinator: NSObject, Coordinator {
     }
     
     func start() {
-        let deviceID = UserDefaults.standard.value(forKey: "PushDeviceToken")
-        print(deviceID)
-//        MoyaProvider<BackendService>().request(.getProfile(deviceID)) { response in
-//            
-//            print("Got response: \(response)")
-//                
-//        }
-        
-        
         tabBarController.viewControllers = tabs.map() { coordinator -> UIViewController in
             return coordinator.navigationController
         }

@@ -9,7 +9,8 @@
 import UIKit
 import UserNotifications
 import CleanroomLogger
-import MicrosoftAzureMobile
+//  replaced with custom solution based on node.js because we had issues with Azure and the push certificate
+//import MicrosoftAzureMobile
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -43,10 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         UIApplication.shared.registerForRemoteNotifications()
         
-        // Clear application badge when launching the app
+        //  Clear application badge when launching the app
         application.applicationIconBadgeNumber = 0
         
-        // Style UINavigationBar
+        //  Style UINavigationBar
         UINavigationBar.appearance().barTintColor = .white
         UINavigationBar.appearance().tintColor = UIColor(hex: "#df0000")
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor(hex: "#df0000")]
@@ -71,5 +72,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                          didReceiveRemoteNotification: userInfo,
                                          fetchCompletionHandler: completionHandler)
     }
-
 }

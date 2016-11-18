@@ -6,6 +6,8 @@
 //  Copyright © 2015 Piccinato, Mathew. All rights reserved.
 //
 
+//  Swift 3 version of https://github.com/MPiccinato/GaugeView
+
 import Foundation
 import UIKit
 import Darwin

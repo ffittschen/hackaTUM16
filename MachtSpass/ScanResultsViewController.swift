@@ -1,4 +1,4 @@
-    //
+//
 //  ScanResultsViewController.swift
 //  HackaTUM
 //
@@ -10,8 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import CleanroomLogger
-import RxMoya
-import Freddy
 
 protocol ScanResultsViewControllerDelegate: class {
     func didPressScanQRCodeButton()
@@ -20,11 +18,6 @@ protocol ScanResultsViewControllerDelegate: class {
 
 class ScanResultsViewController: UIViewController {
     
-    fileprivate let disposeBag: DisposeBag
-    fileprivate let viewModel: ScanResultsViewModel
-    
-    weak var delegate: ScanResultsViewControllerDelegate?
-    
     @IBOutlet weak var machtSpassButton: UIButton!
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
@@ -32,6 +25,11 @@ class ScanResultsViewController: UIViewController {
     @IBOutlet weak var funLevelMeter: GaugeView!
     @IBOutlet weak var dislikeLabel: UILabel!
     @IBOutlet weak var likeLabel: UILabel!
+    
+    fileprivate let disposeBag: DisposeBag
+    fileprivate let viewModel: ScanResultsViewModel
+    
+    weak var delegate: ScanResultsViewControllerDelegate?
     
     init(viewModel: ScanResultsViewModel) {
         self.viewModel = viewModel
@@ -49,10 +47,26 @@ class ScanResultsViewController: UIViewController {
                 self?.delegate?.didPressScanQRCodeButton()
             })
             .addDisposableTo(disposeBag)
-        
     }
     
-    func linkViewModel () {
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) is not supported")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        funLevelMeter.stops = [
+            (0.0, UIColor.red),
+            (0.25, UIColor.orange),
+            (0.5, UIColor.yellow),
+            (0.75, UIColor.green)
+        ]
+        
+        linkViewModel()
+    }
+    
+    private func linkViewModel() {
         viewModel
             .productNameValue
             .bindTo(productNameLabel.rx.text)
@@ -95,47 +109,5 @@ class ScanResultsViewController: UIViewController {
                 self?.delegate?.didPressMachtSpassButton()
             })
             .addDisposableTo(disposeBag)
-        
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) is not supported")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        funLevelMeter.stops = [
-            (0.0, UIColor.red),
-            (0.25, UIColor.orange),
-            (0.5, UIColor.yellow),
-            (0.75, UIColor.green)
-        ]
-        
-        linkViewModel()
     }
 }
-
-//  Data source for detail table
-extension ScanResultsViewController: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "DUMMY")
-        cell.textLabel?.text = "DUMMY_CELL"
-        return cell
-    }
-}
-
-extension ScanResultsViewController: UITableViewDelegate {
-    
-}
-
