@@ -36,3 +36,8 @@ carthage bootstrap --platform iOS --no-use-binaries
 
 Afterwards, you'll probably need to select a Development Team in the Xcode project, since our app uses real push notifications triggered by a node.js backend.
 
+----
+## Credits
+Icons were created from the following assets:
+* [Home](https://thenounproject.com/icon/681787/) by [Jamison Wieser](https://thenounproject.com/jamison/) from the [Noun Project](https://thenounproject.com). Licensed under CCv3
+* [QR Code](https://thenounproject.com/icon/78107/) by [Rohith M S](https://thenounproject.com/rohithdezinr/) from the [Noun Project](https://thenounproject.com). Licensed under CCv3
