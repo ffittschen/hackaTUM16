@@ -447,9 +447,8 @@
 				TargetAttributes = {
 					04173ECB1DD5DBB300F22E67 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = ***REMOVED***;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -471,7 +470,6 @@
 					};
 					048C6C601DD87F3600A63A9B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = ***REMOVED***;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -768,7 +766,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MachtSpass/MachtSpass.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ***REMOVED***;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -778,7 +776,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "com.fittschen.machtSpass Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -792,8 +790,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MachtSpass/MachtSpass.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = ***REMOVED***;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -803,7 +801,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "com.fittschen.machtSpass AppStore";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
@@ -866,7 +864,7 @@
 		048C6C6B1DD87F3600A63A9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = ***REMOVED***;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MachtSpassNotificationService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass.MachtSpassNotificationService;
@@ -879,7 +877,7 @@
 		048C6C6C1DD87F3600A63A9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = ***REMOVED***;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MachtSpassNotificationService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass.MachtSpassNotificationService;
@@ -935,6 +933,7 @@
 				048C6C6C1DD87F3600A63A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
