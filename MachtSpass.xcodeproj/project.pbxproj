@@ -118,7 +118,7 @@
 		04173F1B1DD5E58600F22E67 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		04173F1C1DD5E58600F22E67 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		04173F1D1DD5E58600F22E67 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		04173F271DD5E59A00F22E67 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		04173F271DD5E59A00F22E67 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		04173F291DD5E5BC00F22E67 /* TabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
 		04173F2B1DD5E5D200F22E67 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		04173F2E1DD5E6A400F22E67 /* HomeTabCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabCoordinator.swift; sourceTree = "<group>"; };
@@ -203,12 +203,12 @@
 		04173EC31DD5DBB300F22E67 = {
 			isa = PBXGroup;
 			children = (
+				04173F001DD5E00400F22E67 /* Frameworks */,
 				04173ECE1DD5DBB300F22E67 /* MachtSpass */,
+				048C6C621DD87F3600A63A9B /* MachtSpassNotificationService */,
 				04173EE31DD5DBB300F22E67 /* MachtSpassTests */,
 				04173EEE1DD5DBB400F22E67 /* MachtSpassUITests */,
-				048C6C621DD87F3600A63A9B /* MachtSpassNotificationService */,
 				04173ECD1DD5DBB300F22E67 /* Products */,
-				04173F001DD5E00400F22E67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,13 +226,13 @@
 		04173ECE1DD5DBB300F22E67 /* MachtSpass */ = {
 			isa = PBXGroup;
 			children = (
-				04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */,
-				04173EFE1DD5DC4800F22E67 /* AppCoordinator.swift */,
-				04173F291DD5E5BC00F22E67 /* TabCoordinator.swift */,
-				04173F2D1DD5E5D600F22E67 /* Network */,
-				04D2CE541DD7B37C00F009A0 /* Model */,
 				04173EFD1DD5DC0A00F22E67 /* Features */,
+				04D2CE541DD7B37C00F009A0 /* Model */,
+				04173F2D1DD5E5D600F22E67 /* Network */,
 				C4B4CF9D1DD75468006CA897 /* Supporting Files */,
+				04173EFE1DD5DC4800F22E67 /* AppCoordinator.swift */,
+				04173ECF1DD5DBB300F22E67 /* AppDelegate.swift */,
+				04173F291DD5E5BC00F22E67 /* TabCoordinator.swift */,
 			);
 			path = MachtSpass;
 			sourceTree = "<group>";
@@ -240,8 +240,8 @@
 		04173EE31DD5DBB300F22E67 /* MachtSpassTests */ = {
 			isa = PBXGroup;
 			children = (
-				04173EE41DD5DBB300F22E67 /* MachtSpassTests.swift */,
 				04173EE61DD5DBB300F22E67 /* Info.plist */,
+				04173EE41DD5DBB300F22E67 /* MachtSpassTests.swift */,
 			);
 			path = MachtSpassTests;
 			sourceTree = "<group>";
@@ -249,8 +249,8 @@
 		04173EEE1DD5DBB400F22E67 /* MachtSpassUITests */ = {
 			isa = PBXGroup;
 			children = (
-				04173EEF1DD5DBB400F22E67 /* MachtSpassUITests.swift */,
 				04173EF11DD5DBB400F22E67 /* Info.plist */,
+				04173EEF1DD5DBB400F22E67 /* MachtSpassUITests.swift */,
 			);
 			path = MachtSpassUITests;
 			sourceTree = "<group>";
@@ -261,7 +261,7 @@
 				04173F361DD5E90C00F22E67 /* HomeTab */,
 				C45E81361DD7384D00A34143 /* QRScannerTab */,
 			);
-			name = Features;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		04173F001DD5E00400F22E67 /* Frameworks */ = {
@@ -288,13 +288,13 @@
 		04173F2D1DD5E5D600F22E67 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				04173F2B1DD5E5D200F22E67 /* Backend.swift */,
-				04D2CE4C1DD7AB5F00F009A0 /* VersionSpecificNotificationHandler.swift */,
-				04D2CE4E1DD7ADCF00F009A0 /* NotificationHandler.swift */,
-				04D2CE501DD7AE2800F009A0 /* MachtSpassAction.swift */,
 				04D2CE521DD7B15B00F009A0 /* AzureClient.swift */,
+				04173F2B1DD5E5D200F22E67 /* Backend.swift */,
+				04D2CE501DD7AE2800F009A0 /* MachtSpassAction.swift */,
+				04D2CE4E1DD7ADCF00F009A0 /* NotificationHandler.swift */,
+				04D2CE4C1DD7AB5F00F009A0 /* VersionSpecificNotificationHandler.swift */,
 			);
-			name = Network;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		04173F361DD5E90C00F22E67 /* HomeTab */ = {
@@ -305,14 +305,14 @@
 				04173F331DD5E86D00F22E67 /* HomeTabViewController.xib */,
 				04173F301DD5E72E00F22E67 /* HomeTabViewModel.swift */,
 			);
-			name = HomeTab;
+			path = HomeTab;
 			sourceTree = "<group>";
 		};
 		048C6C621DD87F3600A63A9B /* MachtSpassNotificationService */ = {
 			isa = PBXGroup;
 			children = (
-				048C6C631DD87F3600A63A9B /* NotificationService.swift */,
 				048C6C651DD87F3600A63A9B /* Info.plist */,
+				048C6C631DD87F3600A63A9B /* NotificationService.swift */,
 			);
 			path = MachtSpassNotificationService;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 				04D2CE551DD7B38700F009A0 /* MachtSpass.swift */,
 				04D2CE5D1DD7CA4B00F009A0 /* Product.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C45E81361DD7384D00A34143 /* QRScannerTab */ = {
@@ -334,28 +334,28 @@
 				C4B4CFA11DD756A6006CA897 /* ScanResultsViewController.xib */,
 				C4B4CFA41DD757F4006CA897 /* ScanResultsViewModel.swift */,
 			);
-			name = QRScannerTab;
+			path = QRScannerTab;
 			sourceTree = "<group>";
 		};
 		C4B4CF9D1DD75468006CA897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04D2CE611DD7D35C00F009A0 /* AirPods.jpg */,
+				04173ED61DD5DBB300F22E67 /* Assets.xcassets */,
+				C4B6FC311DD7CB4100FAA33C /* BouncingCoin.sks */,
+				C49D548D1DD7657000FCEE74 /* GaugeView.swift */,
+				04173EDB1DD5DBB300F22E67 /* Info.plist */,
+				04173ED81DD5DBB300F22E67 /* LaunchScreen.storyboard */,
 				04D2CE671DD80B6C00F009A0 /* MMHeadlineProWebTT-Regular.ttf */,
 				04D2CE681DD80B6C00F009A0 /* MMTextProWebTT-Bold.ttf */,
 				04D2CE691DD80B6C00F009A0 /* MMTextProWebTT-Regular.ttf */,
 				04D2CE6A1DD80B6C00F009A0 /* MMTextProWebTT-Semibold.ttf */,
 				04737E511DD77B9B003C89F7 /* MachtSpass.entitlements */,
-				04D2CE611DD7D35C00F009A0 /* AirPods.jpg */,
-				C49D548D1DD7657000FCEE74 /* GaugeView.swift */,
-				04173ED61DD5DBB300F22E67 /* Assets.xcassets */,
-				04173ED81DD5DBB300F22E67 /* LaunchScreen.storyboard */,
-				C4B6FC311DD7CB4100FAA33C /* BouncingCoin.sks */,
-				04173EDB1DD5DBB300F22E67 /* Info.plist */,
+				04D2CE651DD7EC2A00F009A0 /* Observable+Extension.swift */,
 				04173F271DD5E59A00F22E67 /* R.generated.swift */,
 				C4B4CF9E1DD7548B006CA897 /* UIDevice+isSimulator.swift */,
-				04D2CE651DD7EC2A00F009A0 /* Observable+Extension.swift */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -660,6 +660,7 @@
 				04173ED91DD5DBB300F22E67 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -764,14 +765,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = MachtSpass/MachtSpass.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "MachtSpass/Supporting Files/MachtSpass.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MachtSpass/Info.plist;
+				INFOPLIST_FILE = "MachtSpass/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -789,14 +790,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = MachtSpass/MachtSpass.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "MachtSpass/Supporting Files/MachtSpass.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MachtSpass/Info.plist;
+				INFOPLIST_FILE = "MachtSpass/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fittschen.machtSpass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
