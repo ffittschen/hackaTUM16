@@ -38,6 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         notificationHandler = NotificationHandler()
+        notificationHandler?.requestNotificationPermissionsWithCompletion { granted in
+            Log.debug?.message("Granted: \(granted)")
+        }
         UIApplication.shared.registerForRemoteNotifications()
         
         // Clear application badge when launching the app

@@ -71,7 +71,7 @@ class ScanResultsViewController: UIViewController {
         viewModel
             .productFunLevelValue
             .subscribe(onNext: { (funLevel) in
-                self.funLevelMeter.progress = Double(funLevel/100)
+                self.funLevelMeter.progress = Double(funLevel)/100
             }).addDisposableTo(disposeBag)
         
         viewModel
