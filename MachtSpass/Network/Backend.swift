@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import Freddy
 
 enum BackendService {
     case getProfile(id: String)
@@ -76,13 +77,25 @@ extension BackendService: TargetType {
                 "pushid": pushID,
                 "userid": userID
             ]
-        case .postQuestion(let userID, let productID):
-            return [
+        case .postQuestion(let userID, _):
+            
+           return [
                 "userid": userID,
-                "productid": productID,
-                "latitude": "",
-                "longitude": ""
-            ]
+                "topic": "com.fittschen.machtSpass",
+                "aps": [
+                    "category": "com.fittschen.machtSpass.askForMakesFun",
+                    "alert":
+                        ["title": "Macht das Spaß?",
+                         "subtitle": "Demo product",
+                        "body": "Du kannst auswählen, ob Demo Product Spaß machen oder nicht und helfe dadurch&#33;"],
+                    "mutable-content": 1,
+                    "data": [
+                        "questionid":"",
+                        "userid":"",
+                        "image-url":""
+                        ]
+                    ]
+                ]
         default:
             return nil
         }

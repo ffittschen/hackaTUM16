@@ -82,7 +82,7 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
         }
         
         let pushID = UserDefaults.standard.string(forKey: "PushDeviceToken") ?? ""
-        let userID = UserDefaults.standard.string(forKey: "userID") ?? ""
+        let userID = UserDefaults.standard.string(forKey: "UserID") ?? ""
         
         //  As soon as we successfully scanned a product, we want to get product information from the backend
         viewModel.productID.asObservable()
@@ -92,9 +92,9 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
                     case .success(let response):
                         let json = try! JSON(data: response.data)
                         
-                        let userID = try! json.getString(at: "userid")
-                        if UserDefaults.standard.string(forKey: "userID") == nil {
-                            UserDefaults.standard.set(userID, forKey: "userID")
+                        let userID = try! json.getString(at: "Userid")
+                        if UserDefaults.standard.string(forKey: "UserID") == nil {
+                            UserDefaults.standard.set(userID, forKey: "UserID")
                         }
                         
                         self.viewModel.updateProduct(with: json)
@@ -204,7 +204,7 @@ extension QRScannerTabViewCoordinator: ScanResultsViewControllerDelegate {
     
     /// When the MachtSpassButton is being pressed, we send the question to the backend in order to trigger the push notifications
     func didPressMachtSpassButton() {
-        let userID = UserDefaults.standard.string(forKey: "userID") ?? ""
+        let userID = UserDefaults.standard.string(forKey: "UserID") ?? ""
         
         viewModel.productID
             .subscribe(onNext: { productID in
