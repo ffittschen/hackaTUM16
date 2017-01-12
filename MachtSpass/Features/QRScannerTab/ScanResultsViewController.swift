@@ -14,6 +14,7 @@ import CleanroomLogger
 protocol ScanResultsViewControllerDelegate: class {
     func didPressScanQRCodeButton()
     func didPressMachtSpassButton()
+    func registerForRemotePush()
 }
 
 class ScanResultsViewController: UIViewController {
@@ -64,6 +65,7 @@ class ScanResultsViewController: UIViewController {
         ]
         
         linkViewModel()
+        delegate?.registerForRemotePush()
     }
     
     private func linkViewModel() {

@@ -106,6 +106,58 @@ class QRScannerTabViewCoordinator: NSObject, TabCoordinator {
             .addDisposableTo(disposeBag)
     }
     
+    fileprivate func registerForPush() {
+        guard let pushToken = UserDefaults.standard.string(forKey: "PushDeviceToken") else {
+            fatalError("No push device token found.")
+        }
+        
+        if let userID = UserDefaults.standard.string(forKey: "UserID") {
+            backendProvider.request(.getProfile(id: userID)) { result in
+                switch result {
+                case .success(let response):
+                    guard let json = try? JSON(data: response.data) else {
+                        print("Unable to parse JSON Response")
+                        return
+                    }
+                    
+                    guard let token = try? json.getString(at: "pushid") else {
+                        print("Unable to find 'pushid' in: \(json)")
+                        return
+                    }
+                    
+                    if pushToken != token {
+                        self.backendProvider.request(.updateProfile(id: try! json.getString(at: "id"),
+                                                                    name: try! json.getString(at: "name"),
+                                                                    avatar: try! json.getString(at: "avatar"),
+                                                                    pushID: token, notificationActive: try! json.getBool(at: "notificationactive")))
+                    }
+                    
+                case.failure(let error):
+                    print("Erro while get user: \(error)")
+                }
+                
+            }
+        } else {
+            backendProvider.request(.postProfile(name: UIDevice.current.identifierForVendor!.uuidString, avatar: "", pushID: pushToken, notificationActive: true)) { result in
+                switch result {
+                case .success(let response):
+                    guard let json = try? JSON(data: response.data) else {
+                        print("Unable to parse JSON Response")
+                        return
+                    }
+                    guard let userID = try? json.getString(at: "id") else {
+                        print("Unable to find user id in: \(json)")
+                        return
+                    }
+                    
+                    UserDefaults.standard.setValue(userID, forKey: "UserID")
+                case .failure(let error):
+                    print("Erro while post user: \(error)")
+                }
+            }
+        }
+    }
+    
     private func showBarcodeScanner() {
         barcodeScannerController.navigationItem.setHidesBackButton(true, animated: false)
         barcodeScannerController.title = "Scan"
@@ -140,6 +192,10 @@ extension QRScannerTabViewCoordinator: BarcodeScannerDismissalDelegate {
 }
 
 extension QRScannerTabViewCoordinator: ScanResultsViewControllerDelegate {
+    
+    func registerForRemotePush() {
+        registerForPush()
+    }
     
     /// Reset the tab and start scanning for QR codes again
     func didPressScanQRCodeButton() {
