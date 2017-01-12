@@ -12,7 +12,7 @@ import Moya
 enum BackendService {
     case getProfile(id: String)
     case postProfile(name: String, avatar: String, pushID: String, notificationActive: Bool)
-    case updateProfile(id: String)
+    case updateProfile(id: String, name: String, avatar: String, pushID: String, notificationActive: Bool)
     case product(id: String, pushID: String, userID: String)
     case postQuestion(userID: String, productID: String)
     case pullQuestion(id: String)
@@ -21,15 +21,15 @@ enum BackendService {
 }
 
 extension BackendService: TargetType {
-    var baseURL: URL { return URL(string: "https://machtspass-api.azurewebsites.net/api/v1")! }
+    var baseURL: URL { return URL(string: "http://machtspass.applab.cloud:9020")! }
     
     var path: String {
         switch self {
         case .getProfile(let id):    return "/profile/\(id)"
         case .postProfile:           return "/profile"
-        case .updateProfile(let id): return "/profile/\(id)"
+        case .updateProfile(let id, _,_,_,_): return "/profile/\(id)"
         case .product:               return "/product"
-        case .postQuestion:          return "/question"
+        case .postQuestion:          return "/demo/push"
         case .pullQuestion(let id):  return "/question/\(id)/status"
         case .getQuestion(let id):   return "/question/\(id)"
         case .postAnswer:            return "/answer"
@@ -59,7 +59,16 @@ extension BackendService: TargetType {
                 "name": name,
                 "avatar": avatar,
                 "pushid": pushID,
-                "notificationactive": notificationActive
+                "notificationactive": notificationActive,
+                "bucks": 42
+            ]
+        case .updateProfile(_, let name, let avatar, let pushID, let notificationActive):
+            return [
+                "name": name,
+                "avatar": avatar,
+                "pushid": pushID,
+                "notificationactive": notificationActive,
+                "bucks": 42
             ]
         case .product(let id, let pushID, let userID):
             return [
